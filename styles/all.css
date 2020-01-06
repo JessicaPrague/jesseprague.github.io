@@ -89,9 +89,14 @@
 
 /*GLOBAL*/
 html {
-/*    animation: 1.0s ease-in fade-in;*/
+    animation: 1.0s ease-in fade-in;
 
 }
+
+img {
+    -webkit-user-drag: none;
+}
+
 body {
     background-color: var(--lightbg);
     font-family: 'SF-Display';
