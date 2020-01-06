@@ -3,26 +3,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head -->
-<head id="top">
-    <meta charset="UTF-8">
-    <title>Jessica Prague</title>
-    <meta name="Description" content="Hi my name is Jessica">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/all.css" type="text/css">
-    
-    <!-- Javascript -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- Add Javasctipt -->
-    
-</head>
-    
-<body>
-    <!-- Header -->
-    <header class="c12">
-        <!-- Nav -->
-        <h3 class="medium content-web">Jessica Prague's website</h3>
+    <!-- Head -->
+    <head id="top">
+        <meta charset="UTF-8">
+        <title>Jessica Prague</title>
+        <meta name="Description" content="Hi my name is Jessica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/all.css" type="text/css">
+
+        <!-- Javascript -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script>
+            /* Scroll button appears on scroll */
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 20) {
+                    $('.scroll-to-top').removeClass('no-display');
+                } else {
+                    $('.scroll-to-top').addClass('no-display');
+                }
+            });
+            /* Smooth Scrolling */
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 500, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="index.html">Work</a></li>
+                <li><a href="about.html">My Story</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+
+        <h3>Jessica Prague</h3>
+
+        <!-- Projects -->
+        <div class="grid">
+            <div class="image-container">
+                <img src="images/eater.png" alt="eater img"/>
+                <div class="overlay">
+                    <h3>Eater App</h3>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="images/explornell.png" alt="explornell img"/>
+                <div class="overlay">
+                    <h3>Explornell</h3>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="images/instagram.png" alt="instagram img"/>
+                <div class="overlay">
+                    <h3>Instagram Hashtag Filters</h3>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="images/uplift.png" alt="uplift img"/>
+                <div class="overlay">
+                    <h3>Uplift</h3>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="images/cuReviews.png" alt="cuReviews img"/>
+                <div class="overlay">
+                    <h3>CU Reviews</h3>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="images/dailyUI.png" alt="dailyUI img"/>
+                <div class="overlay">
+                    <h3>Daily UI Challenge</h3>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h4 class="line"><a id="mailto" href="mailto:jnp49@cornell.edu"> 👋 Let's Get In Touch!</a></h4>
+            <div class="social">
+                <img class="icon" src="images/linkedin.png" alt="linkedin"/>
+                <img class="icon" src="images/medium.png" alt="medium"/>
+                <img class="icon" src="images/email.png" alt="email"/>
+            </div>
+            <h6 class="name"><span id="blueStar">★</span> JESSICA PRAGUE <span id="blueStar">★</span></h6>
+        </div>
 
 
-
-</body>
+    </body>
