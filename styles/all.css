@@ -88,6 +88,9 @@
 
 
 /*GLOBAL*/
+html {
+    animation: 1.0s ease-in fade-in;
+}
 img {
     -webkit-user-drag: none;
 }
@@ -169,7 +172,7 @@ body {
 
 #fb {
     color: #4267b2;
-        text-decoration: none;
+    text-decoration: none;
 }
 
 .cufb {
@@ -225,10 +228,10 @@ body {
 }
 .image-container img {
     border-radius: 10px;
-/*    box-shadow: 0 5px 10px var(--gray-02);*/
-	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    /*    box-shadow: 0 5px 10px var(--gray-02);*/
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     display: block;
 }
 
@@ -248,7 +251,7 @@ body {
     transition: .5s ease;
     background-color: rgba(255,255,255, 0.9);
     border-radius: 10px;
-    
+
 }
 
 .image-container:hover .overlay {
@@ -272,7 +275,6 @@ body {
 }
 
 .overlay img {
-    /*    color: black;*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -285,18 +287,28 @@ body {
 
 
 /*Mobile*/
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 300px) {
     .image-container {
-        width: 90%;
-        margin: 15px;
+        width: 85%;
+        margin: 12.5px 25px;
     }
 }
-
+/*Midway*/
+@media screen and (min-width: 700px) {
+    .image-container {
+        width: 41%;
+        margin: 20px;
+    }    
+}
 /*Desktop*/
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1300px) {
     .image-container {
         width: 45%;
         margin: 30px;
+    }
+    .grid {
+        margin-left: 2%;
+        margin-right: 2%;
     }
 
 }
@@ -351,9 +363,10 @@ body {
 /*Footer*/
 .footer {
     background-color: var(--darkbg);
-    margin-top: 60px;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100% auto;
 }
 
 .social {
@@ -366,14 +379,20 @@ body {
     text-decoration: none;
 }
 .icon {
-    width: 70px;
-    padding-left: 2px;
-    padding-right: 2px;
+    width: 45px;
 }
 .icon:hover {
     transform: scale(1.3);
     transition: .5s ease;
 }
+
+/*Mobile*/
+@media screen and (min-width: 300px) {
+    .icon {
+        width: 55px;
+    }
+}
+
 .name {
     font-weight: 500;
     margin: 0 auto;
@@ -384,5 +403,15 @@ body {
     color: var(--blue);
 }
 
-
+/*ANIMATION*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0.05%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
