@@ -87,7 +87,9 @@
 }
 
 
-/*GLOBAL*/
+/* ===============
+       GLOBAL 
+   =============== */
 html {
     animation: 1.0s ease-in fade-in;
     scroll-behavior: smooth; 
@@ -101,16 +103,14 @@ body {
     padding: 0;
     margin: 0;
 }
-
-/*Index*/
-
-/*NAVIGATION*/
+/* ===============
+       NAVIGATION 
+   =============== */
 header {
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
     background-color: black;
-
 }
 ul {
     margin: 0;
@@ -174,7 +174,6 @@ a {
         padding-bottom: 20px;
         background-color: var(--lightbg);
         width: 90%;
-
     }
     .main-nav .active {
         color: black;
@@ -206,7 +205,7 @@ a {
     header a {
         position: relative;
     }
-    header a:after{
+    header a:after {
         content: '';
         position: absolute;
         width: 0; height: 3px;
@@ -217,16 +216,16 @@ a {
         transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
         -webkit-transition: width .5s ease;
     }
-    header a:hover:after{
+    header a:hover:after {
         width: 100%;
         left: 0;
         background: linear-gradient(120deg, #5591FF 0%, #42b0f4 100%);;
     }
-
 }
 
-
-/*Parallax*/
+/* ===============
+      PARALLAX 
+   =============== */
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -306,7 +305,9 @@ a {
     }
 }
 
-/*Projects GRID*/
+/* ===============
+    PROJECTS GRID 
+   =============== */
 #myProjects {
     margin-top: 45px;
     text-align: center;
@@ -316,13 +317,10 @@ a {
     line-height: .1em;
     margin-left: 9%;
 }
-
 #myProjects span { 
     background: var(--lightbg); 
     padding: 0 12px; 
 }
-
-
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -404,13 +402,14 @@ a {
 }
 .image-container img {width: 100%;}
 
-/*Lets Get In Touch*/
+/* ===============
+     GET IN TOUCH 
+   =============== */
 .line {
     text-align: center !important;
     margin-top: 22px !important;
     margin-bottom: 9px !important;
     text-transform: uppercase;
-
 }
 .line a {
     color: var(--blue) !important;
@@ -448,7 +447,9 @@ a {
     transition: .35s ease-in-out;
 }
 
-/*Footer*/
+/* ===============
+      FOOTER 
+   =============== */
 .footer {
     background-color: var(--darkbg);
     margin-top: 5%;
@@ -488,7 +489,9 @@ a {
     color: var(--blue);
 }
 
-/*ANIMATIONS*/
+/* ===============
+      ANIMATIONS 
+   =============== */
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -499,4 +502,3 @@ a {
         transform: translateY(0);
     }
 }
-

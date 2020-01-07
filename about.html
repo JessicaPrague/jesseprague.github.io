@@ -1,0 +1,92 @@
+<!-- Index -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head -->
+    <head id="top">
+        <meta charset="UTF-8">
+        <title>About Me</title>
+        <meta name="Description" content="Hi my name is Jessica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Linking CSS -->
+        <link rel="stylesheet" href="styles/all.css" type="text/css">
+
+        <!-- Javascript -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/.eslintrc.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            const header = document.querySelector('.main-header');
+
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY;
+                if(scrollPos > 10) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            })
+
+        </script>
+        <script>
+            /* Scroll button appears on scroll */
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 20) {
+                    $('.scroll-to-top').removeClass('no-display');
+                } else {
+                    $('.scroll-to-top').addClass('no-display');
+                }
+            });
+            /* Smooth Scrolling */
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 500, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <header class="header">
+            <h5 class="jp"><a href="#">Jessica Prague</a></h5>
+            <ul class="main-nav">
+                <li><a href="#work">Work</a></li>
+                <li><a href="about.html" class="active">My Story</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </header> 
+
+        <!-- Parallax Effect -->
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/marbl">
+            <div class="paratext">  
+<!--                <h1 class="para1">Hi, I'm Jesse.</h1>-->
+<!--                <h3 class="para2">Student at <a href = "https://www.infosci.cornell.edu" target="_blank" class="cufb" id="cu">Cornell</a>, Incoming Product Designer at <a href = "https://facebook.design" target="_blank" class="cufb" id="fb">Facebook</a></h3>-->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h4 class="line"><a id="mailto" href="mailto:jnp49@cornell.edu"> 👋 Let's Get In Touch!</a></h4>
+            <div class="social">                
+                <a href="https://www.linkedin.com/in/jessicaprague/"> <img class="icon" src="images/linkedin.png" alt="linkedin"/> </a>
+                <a href="https://medium.com/@jessicaprague/"> <img class="icon" src="images/medium.png" alt="medium"/> </a>
+                <a href="mailto:jnp49@cornell.edu"> <img class="icon" src="images/email.png" alt="email"/> </a>
+            </div>
+            <h6 class="name"><span id="blueStar">★</span> DESIGNED AND CODED BY JESSICA PRAGUE <span id="blueStar">★</span></h6>
+        </div>
+
+
+    </body>
