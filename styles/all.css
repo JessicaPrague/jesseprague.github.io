@@ -18,6 +18,12 @@
     --darkbg: #f3f3f3;
     --lightbg: #FAFAFA;
 }
+.pink {
+    color: var(--pink) !important;
+}
+.blue {
+    color: var(--blue) !important;
+}
 
 /*Fonts*/
 @font-face {
@@ -49,15 +55,24 @@
     }
     h4 {
         font-size: calc(18px + 6 * ((100vw - 320px) / (680)));
+        margin-top: 1px !important;
+        margin-bottom: 0;
     }
     h5 {
         font-size: calc(16px + 4 * ((100vw - 320px) / (680)));
+        margin-top: 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
     }
     h6 {
         font-size: calc(14px + 2 * ((100vw - 320px) / (680)));
     }
     p, li {
-        font-size: calc(18px + 6 * ((100vw - 320px) / (680)));
+        /*        font-size: calc(18px + 6 * ((100vw - 320px) / (680)));*/
+        font-size: 18px;
+        line-height: 150%;
+        margin-top: 10px;
+
     }
 }
 
@@ -73,23 +88,29 @@
         font-size: 36px;
     }
     h4 {
-        font-size: 24px;
+        font-size: 30px;
+        margin-top: 1px !important;
+        margin-bottom: 0;
     }
     h5 {
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
     }
     h6 {
         font-size: 16px;
     }
     p, li {
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 150%;
     }
 }
 
 
 /* ===============
-       GLOBAL 
-   =============== */
+GLOBAL 
+=============== */
 html {
     animation: 1.0s ease-in fade-in;
     scroll-behavior: smooth; 
@@ -103,9 +124,75 @@ body {
     padding: 0;
     margin: 0;
 }
+
 /* ===============
-       NAVIGATION 
-   =============== */
+GRID 
+=============== */
+.thegrid {
+    /*    display: grid;*/
+    grid-template-columns: minmax(0, 1fr);
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.c12 {
+    grid-column: 2 /12;
+}
+.c6 {
+    grid-column: 4 / 10;
+}
+.c6-left {
+    grid-column: 1 / 7;
+}
+.c6-right {
+    grid-column: 8 / 12;
+}
+
+/* ===============
+DESIGNS 
+=============== */
+.shadow {
+    box-shadow: 0 0 12px 0 var(--gray-01);
+}
+.link {
+    margin: 0 auto;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+.link:before,
+.link:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 0px;
+    height: 2px;
+    margin: 5px 0 0;
+    transition:  all 0.2s ease-in-out;
+    transition-duration: 0.5s;
+    opacity: 0;
+    background-color: var(--blue);
+}
+.link:before {
+    left: 50%;
+}
+.link:after {
+    right: 50%;
+}
+.link:hover {
+    cursor: pointer;
+}
+.link:hover:before,
+.link:hover:after {
+    width: 50%;
+    opacity: 1;
+}
+
+
+/* ===============
+NAVIGATION 
+=============== */
 header {
     box-sizing: border-box;
     margin: 0;
@@ -224,8 +311,8 @@ a {
 }
 
 /* ===============
-      PARALLAX 
-   =============== */
+PARALLAX 
+=============== */
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -234,6 +321,9 @@ a {
     min-height: 550px;
     background: transparent;
     padding: 20px;
+}
+#marble-para {
+    min-height: 350px;
 }
 .paratext {
     padding-top: 10%;
@@ -306,20 +396,20 @@ a {
 }
 
 /* ===============
-    PROJECTS GRID 
-   =============== */
+PROJECTS GRID 
+=============== */
 #myProjects {
-    margin-top: 45px;
-    text-align: center;
-    border-bottom: 1px solid var(--gray-01); 
+    margin-top: 45px !important;
+    text-align: center !important;
+    border-bottom: 1px solid var(--gray-01) !important; 
     width: 83%;
-    margin-bottom: 20px;
-    line-height: .1em;
-    margin-left: 9%;
+    margin-bottom: 20px !important;
+    line-height: .1em !important;
+    margin-left: 9% !important;
 }
 #myProjects span { 
     background: var(--lightbg); 
-    padding: 0 12px; 
+    padding: 0 12px !important; 
 }
 .grid {
     display: flex;
@@ -403,8 +493,8 @@ a {
 .image-container img {width: 100%;}
 
 /* ===============
-     GET IN TOUCH 
-   =============== */
+GET IN TOUCH 
+=============== */
 .line {
     text-align: center !important;
     margin-top: 22px !important;
@@ -448,8 +538,8 @@ a {
 }
 
 /* ===============
-      FOOTER 
-   =============== */
+FOOTER 
+=============== */
 .footer {
     background-color: var(--darkbg);
     margin-top: 5%;
@@ -490,8 +580,8 @@ a {
 }
 
 /* ===============
-      ANIMATIONS 
-   =============== */
+ANIMATIONS 
+=============== */
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -501,4 +591,9 @@ a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.me {
+    width: 25em;
+    border-radius: 4px;
 }
