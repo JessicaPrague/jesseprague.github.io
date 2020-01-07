@@ -109,6 +109,8 @@ header {
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
+    background-color: black;
+
 }
 ul {
     margin: 0;
@@ -125,34 +127,33 @@ a {
     text-align: center;
     display: block;
     text-decoration: none;
-    color: black;
+    color: var(--darkbg);
 }
 .jp {
     margin: 0;
-    font-size: 1.45em;
+    font-size: 17px;
     text-decoration: none;
 }
 .main-nav {
     margin-top: -10px;
 }
 .main-nav a {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--gray-02);
     font-weight: 500;
 }
 .main-nav a:hover {
-    color: black;
+    color: var(--gray-02);
     transition: .5s ease-in-out;
 }
 .main-nav .active {
-    color: black;
+    color: var(--gray-02);
 }
 .header {
     padding-top: .5em;
     padding-bottom: .5em;
-    background-color: var(--lightbg);
 }
-@media (min-width: 769px) {
+@media (min-width: 300px) {
     .header,
     .main-nav {
         display: flex;
@@ -160,18 +161,23 @@ a {
     .header {
         flex-direction: column;
         align-items: center;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         max-width: 1150px;
     }
-
 }
-@media (min-width: 1025px) {
+@media (min-width: 800px) {
     .header {
         flex-direction: row;
         justify-content: space-between;
         padding-top: 20px;
         padding-bottom: 20px;
+        background-color: var(--lightbg);
+        width: 90%;
+
+    }
+    .main-nav .active {
+        color: black;
     }
     .main-nav {
         margin-right: 40px;
@@ -179,12 +185,15 @@ a {
     }
     .jp {
         margin-left: 40px;
-
+        font-size: 1.45em;
     }
     .jp a {
         padding-left: 5px !important;
         padding-right: 5px !important;
-
+        color: black;
+    }
+    .main-nav a:hover {
+        color: black;
     }
     .main-nav a {
         margin: 10px 10px;
@@ -192,6 +201,7 @@ a {
         padding-bottom: 0 !important;
         padding-left: 5px !important;
         padding-right: 5px !important;
+        font-size: 18px;
     }
     header a {
         position: relative;
