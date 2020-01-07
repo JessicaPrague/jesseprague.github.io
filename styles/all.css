@@ -90,6 +90,7 @@
 /*GLOBAL*/
 html {
     animation: 1.0s ease-in fade-in;
+    scroll-behavior: smooth; 
 }
 img {
     -webkit-user-drag: none;
@@ -101,32 +102,120 @@ body {
     margin: 0;
 }
 
-/*Nav*/
-.navbar ul {
-    list-style-type: none;
+/*Index*/
+
+/*NAVIGATION*/
+header {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-.navbar li {
-    float: left;
-}
-.navbar li a {
-    display: block;
-    color: #333333;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
-.navbar li a:hover {
-    color: var(--blue);
-    transition-duration: .5s;
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.navbar .active {
-    color: var(--blue);
+a {
+    text-decoration: none;
+}
+.jp a,
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.jp {
+    margin: 0;
+    font-size: 1.45em;
+    text-decoration: none;
+}
+.main-nav {
+    margin-top: -10px;
+}
+.main-nav a {
+    font-size: 18px;
+    color: var(--gray-02);
+    font-weight: 500;
+}
+.main-nav a:hover {
+    color: black;
+    transition: .5s ease-in-out;
+}
+.main-nav .active {
+    color: black;
+}
+.header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background-color: var(--lightbg);
+}
+@media (min-width: 769px) {
+    .header,
+    .main-nav {
+        display: flex;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1150px;
+    }
+
+}
+@media (min-width: 1025px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .main-nav {
+        margin-right: 40px;
+        margin-top: 10px;
+    }
+    .jp {
+        margin-left: 40px;
+
+    }
+    .jp a {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+
+    }
+    .main-nav a {
+        margin: 10px 10px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    header a {
+        position: relative;
+    }
+    header a:after{
+        content: '';
+        position: absolute;
+        width: 0; height: 3px;
+        display: block;
+        margin-top: 3px;
+        right: 0;
+        background: linear-gradient(120deg, #5591FF 0%, #42b0f4 100%);
+        transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+        -webkit-transition: width .5s ease;
+    }
+    header a:hover:after{
+        width: 100%;
+        left: 0;
+        background: linear-gradient(120deg, #5591FF 0%, #42b0f4 100%);;
+    }
+
 }
 
-/*Index*/
+
 /*Parallax*/
 .container {
     max-width: 100%;
@@ -208,17 +297,30 @@ body {
 }
 
 /*Projects GRID*/
+#myProjects {
+    margin-top: 45px;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-01); 
+    width: 83%;
+    margin-bottom: 20px;
+    line-height: .1em;
+    margin-left: 9%;
+}
+
+#myProjects span { 
+    background: var(--lightbg); 
+    padding: 0 12px; 
+}
+
+
 .grid {
-    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .image-container img {
     border-radius: 10px;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
     display: block;
 }
 .image-container {
@@ -228,7 +330,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;g
+    left: 0;
     right: 0;
     height: 100%;
     width: 100%;
@@ -298,6 +400,7 @@ body {
     margin-top: 22px !important;
     margin-bottom: 9px !important;
     text-transform: uppercase;
+
 }
 .line a {
     color: var(--blue) !important;
@@ -377,12 +480,13 @@ body {
 
 /*ANIMATIONS*/
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(0.05%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(0.05%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
