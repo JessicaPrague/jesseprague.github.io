@@ -9,21 +9,60 @@
     --gray-03: #586069;
     --gray-04: #2F363D;
     --gray-05: #1B1F23;
+    --darkbg: #f3f3f3;
+    --lightbg: #FAFAFA;
 
     --blue: #669CFF;
     --text: #333333;
     --pink: #FD7373;
     --yellow: #b8b04d;
+    --cornellred: #f05354;
+    --facebookblue: #4267b2;
     --green: #76ad44;
-    --darkbg: #f3f3f3;
-    --lightbg: #FAFAFA;
+    --orange: #ED9B30;
+
 }
+/*PINK*/
 .pink {
     color: var(--pink) !important;
 }
+.pink:before,
+.pink:after {
+    background-color: var(--pink);
+}
+/*BLUE*/
 .blue {
     color: var(--blue) !important;
 }
+.blue:before,
+.blue:after {
+    background-color: var(--blue);
+}
+/*CORNELL RED*/
+.cornellred {
+    color: var(--cornellred) !important;
+}
+.cornellred:before,
+.cornellred:after {
+    background-color: var(--cornellred);
+}
+/*FACEBOOK BLUE*/
+.facebookblue {
+    color: var(--facebookblue) !important;
+}
+.facebookblue:before,
+.facebookblue:after {
+    background-color: var(--facebookblue);
+}
+/*ORANGE*/
+.orange {
+    color: var(--orange) !important;
+}
+.orange:before,
+.orange:after {
+    background-color: var(--orange);
+}
+
 
 /*Fonts*/
 @font-face {
@@ -43,6 +82,20 @@
 }
 
 /*Font Changes*/
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+h5 {
+    text-transform: uppercase;
+}
+h4 {
+    margin-top: 1vh !important;
+}
+p, li {
+    margin-top: 1vh !important;
+    margin-bottom: 1vh !important;
+    line-height: 1.5;
+}
 @media screen and (min-width: 450px) {
     h1 {
         font-size: calc(36px + 36* ((100vw - 320px) / 680));
@@ -55,24 +108,15 @@
     }
     h4 {
         font-size: calc(18px + 6 * ((100vw - 320px) / (680)));
-        margin-top: 1px !important;
-        margin-bottom: 0;
     }
     h5 {
         font-size: calc(16px + 4 * ((100vw - 320px) / (680)));
-        margin-top: 0;
-        margin-bottom: 0;
-        text-transform: uppercase;
     }
     h6 {
-        font-size: calc(14px + 2 * ((100vw - 320px) / (680)));
+        font-size: calc(18px + 2 * ((100vw - 320px) / (680)));
     }
     p, li {
-        /*        font-size: calc(18px + 6 * ((100vw - 320px) / (680)));*/
-        font-size: 18px;
-        line-height: 150%;
-        margin-top: 10px;
-
+        font-size: calc(14px + 6 * ((100vw - 320px) / (680)));
     }
 }
 
@@ -89,21 +133,16 @@
     }
     h4 {
         font-size: 30px;
-        margin-top: 1px !important;
-        margin-bottom: 0;
+        margin: 0;
     }
     h5 {
         font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 0;
-        text-transform: uppercase;
     }
     h6 {
-        font-size: 16px;
+        font-size: 22px;
     }
     p, li {
-        font-size: 20px;
-        line-height: 150%;
+        font-size: 18px;
     }
 }
 
@@ -129,12 +168,17 @@ body {
 GRID 
 =============== */
 .thegrid {
-    /*    display: grid;*/
-    grid-template-columns: minmax(0, 1fr);
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 3em;
-    margin-bottom: 3em;
+}
+/*Desktop*/
+@media screen and (min-width: 800px) {
+    .thegrid {
+        /*        display: flex;*/
+        width: 80%;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
 }
 .c12 {
     grid-column: 2 /12;
@@ -172,7 +216,6 @@ DESIGNS
     transition:  all 0.2s ease-in-out;
     transition-duration: 0.5s;
     opacity: 0;
-    background-color: var(--blue);
 }
 .link:before {
     left: 50%;
@@ -182,6 +225,7 @@ DESIGNS
 }
 .link:hover {
     cursor: pointer;
+    opacity: .8;
 }
 .link:hover:before,
 .link:hover:after {
@@ -234,7 +278,7 @@ a {
     transition: .5s ease-in-out;
 }
 .main-nav .active {
-    color: var(--gray-02);
+    color: var(--darkbg);
 }
 .header {
     padding-top: .5em;
@@ -328,6 +372,7 @@ PARALLAX
 .paratext {
     padding-top: 10%;
     padding-bottom: 10%;
+
 }
 .para1 {
     z-index: 2;
@@ -342,29 +387,37 @@ PARALLAX
     width: 50%;
     margin: 0 auto;
     line-height: 1.45em;
+    margin-top: 1vh;
+}
+@media screen and (max-width: 800px) {
+    .para2 {
+        margin-top: 2vh;
+    }
+    #marble-para {
+        min-height: 200px;
+    }
 }
 
 /*Cornell FB Underline*/
-#cu {
-    color: #f14f4f;
+.lineswipe {
     text-decoration: none;
-}
-#fb {
-    color: #4267b2;
-    text-decoration: none;
-}
-.cufb {
     position: relative;
     display: inline-block;
     transition: color 0.2s ease;
 }
-.cufb:hover::after, .cufb:hover::before {
+.lineswipe:hover::after, .lineswipe:hover::before {
     display: block;
     width: 100%;
     left: 0;
     bottom: 10px;
 }
-.cufb::after, .cufb::before {
+.lineswipe::before {
+    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+}
+.lineswipe::after {
+    -webkit-transition:width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+}
+.lineswipe::after, .lineswipe::before {
     content: "";
     position: absolute;
     width: 0;
@@ -372,20 +425,18 @@ PARALLAX
     height: 10px;
     bottom: 10px;
     z-index: -1;
-} 
-#fb::before {
-    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-    background: #4267b24f;
 }
-#fb::after {
-    -webkit-transition:width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+.cornelllineswipe {
+    color: var(--cornellred);
 }
-#cu::before {
-    -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+.cornelllineswipe::before {
     background: #ec343457;
 }
-#cu::after {
-    -webkit-transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+.facebooklineswipe {
+    color: var(--facebookblue);
+}
+.facebooklineswipe::before {
+    background: #4267b24f;
 }
 
 @media screen and (max-width: 900px) {
@@ -499,43 +550,53 @@ GET IN TOUCH
     text-align: center !important;
     margin-top: 22px !important;
     margin-bottom: 9px !important;
-    text-transform: uppercase;
 }
-.line a {
-    color: var(--blue) !important;
-}
-#mailto {
+
+.line a{
     position: relative;  
     font-size: 98% !important;
     transition: .35s ease-in-out;
     text-decoration: none;
 }
-#mailto:hover::before,  #mailto:hover::after {
+.line a:hover::before, .line a:hover::after {
     color: black !important;
     bottom: -7px;
     height: 10px;
     transition: .35s ease-in-out;
 }
-#mailto::after {
+.line a::after {
     display: block;
     content: '';
     height: 12px;
     transition: .35s ease-in-out;
     width: 92%;
     opacity: .2;
-    background: var(--blue) !important;;
     position: absolute;
     bottom: 1px;
-    left: 25px;
+    left: 30px;
 }
-#mailto::before {
+@media screen and (max-width: 1000px) {
+    .line a::after {
+        left: 24px;
+    }
+}
+.line a::before {
     -webkit-transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
     transition: .35s ease-in-out;
 }
-#mailto::after {
+.line a::after {
     -webkit-transition:width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
     transition: .35s ease-in-out;
 }
+.blueline a{
+    color: var(--blue) !important;
+    text-transform: uppercase;
+
+}
+.blueline a::after {
+    background: var(--blue) !important;
+}
+
 
 /* ===============
 FOOTER 
@@ -593,7 +654,71 @@ ANIMATIONS
     }
 }
 
-.me {
-    width: 25em;
+/* ===============
+ABOUT PAGE 
+=============== */
+.places {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+.places a{
+    text-decoration: none;
+    text-transform: normal !important;
+    margin-left: .5vw;
+    margin-right: .5vw;
+    font-weight: 500;
+}
+.cornellline a{
+    color: var(--cornellred) !important;
+}
+.cornellline a::after {
+    background: var(--cornellred) !important;
+    width: 101%;
+    left: 0;
+}
+.voxline a{
+    color: var(--orange) !important;
+}
+.voxline a::after {
+    background: var(--orange) !important;
+    width: 101%;
+    left: 0;
+}
+.facebookline a{
+    color: var(--facebookblue) !important;
+
+}
+.facebookline a::after {
+    background: var(--facebookblue) !important;
+    width: 101%;
+    left: 0;
+}
+.gray {
+    color: var(--gray-02);
+}
+.about-me-text {
+    flex-grow: 1;
+}
+.about-me-image img{
+    width: 30vw;
     border-radius: 4px;
+}
+.about-me-container {
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+}
+/*Desktop*/
+@media screen and (min-width: 800px) {
+    .about-me-container {
+        display: flex;
+        width: 80%;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    .about-me-text {
+        margin-right: 4%;
+    }
+
 }
