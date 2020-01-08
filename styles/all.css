@@ -87,6 +87,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h5 {
     text-transform: uppercase;
+    margin-top: 1vh !important;
+
 }
 h4 {
     margin-top: 1vh !important;
@@ -176,8 +178,8 @@ GRID
     .thegrid {
         /*        display: flex;*/
         width: 80%;
-        margin-top: 3em;
-        margin-bottom: 3em;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 }
 .c12 {
@@ -231,6 +233,9 @@ DESIGNS
 .link:hover:after {
     width: 50%;
     opacity: 1;
+}
+.justify {
+    text-align: justify;
 }
 
 
@@ -363,6 +368,7 @@ PARALLAX
 }
 .parallax {
     min-height: 550px;
+/*    min-height: 80vh;*/
     background: transparent;
     padding: 20px;
 }
@@ -370,7 +376,7 @@ PARALLAX
     min-height: 350px;
 }
 .paratext {
-    padding-top: 10%;
+    padding-top: 14%;
     padding-bottom: 10%;
 
 }
@@ -671,35 +677,44 @@ ABOUT PAGE
 }
 .places a{
     text-decoration: none;
-    text-transform: normal !important;
+    text-transform: normal;
     margin-left: .5vw;
     margin-right: .5vw;
     font-weight: 500;
 }
 .cornellline a{
-    color: var(--cornellred) !important;
+    color: var(--cornellred);
 }
 .cornellline a::after {
-    background: var(--cornellred) !important;
+    background: var(--cornellred);
     width: 101%;
     left: 0;
 }
 .voxline a{
-    color: var(--orange) !important;
+    color: var(--orange);
 }
 .voxline a::after {
-    background: var(--orange) !important;
+    background: var(--orange);
     width: 101%;
     left: 0;
 }
 .facebookline a{
-    color: var(--facebookblue) !important;
+    color: var(--facebookblue);
 
 }
 .facebookline a::after {
-    background: var(--facebookblue) !important;
+    background: var(--facebookblue);
     width: 101%;
     left: 0;
+}
+/*Mobile*/
+@media screen and (max-width: 800px) {
+    .places {
+        display:none;
+    }
+    .about-me-text {
+        margin-top: 3vh;
+    }
 }
 .gray {
     color: var(--gray-02);
@@ -707,8 +722,13 @@ ABOUT PAGE
 .about-me-text {
     flex-grow: 1;
 }
+.about-me-image {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 3vh;
+}
 .about-me-image img{
-    width: 30vw;
+    width: 100%;
     border-radius: 4px;
 }
 .about-me-container {
@@ -717,15 +737,18 @@ ABOUT PAGE
     margin: 0 auto;
 }
 /*Desktop*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1140px) {
     .about-me-container {
         display: flex;
         width: 80%;
         margin-top: 3em;
-        margin-bottom: 3em;
+        margin-bottom: -3vh;
     }
     .about-me-text {
         margin-right: 4%;
+    }
+    .about-me-image img{
+        width: 30vw;
     }
 
 }
