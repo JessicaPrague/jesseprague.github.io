@@ -174,9 +174,8 @@ GRID
     margin: 0 auto;
 }
 /*Desktop*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     .thegrid {
-        /*        display: flex;*/
         width: 80%;
         margin-top: 2em;
         margin-bottom: 2em;
@@ -302,7 +301,7 @@ a {
         max-width: 1150px;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     .header {
         flex-direction: row;
         justify-content: space-between;
@@ -395,7 +394,7 @@ PARALLAX
     line-height: 1.45em;
     margin-top: 1vh;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .para2 {
         margin-top: 2vh;
     }
@@ -445,7 +444,7 @@ PARALLAX
     background: #4267b24f;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
     .parallax {
         min-height: 300px;
         padding: 0px;
@@ -530,14 +529,14 @@ PROJECTS GRID
     }
 }
 /*Midway*/
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
     .image-container {
         width: 41%;
         margin: 20px;
     }    
 }
 /*Desktop*/
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 992px) {
     .image-container {
         width: 45%;
         margin: 30px;
@@ -581,7 +580,7 @@ GET IN TOUCH
     bottom: 1px;
     left: 30px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
     .line a::after {
         left: 24px;
     }
@@ -609,9 +608,9 @@ FOOTER
 =============== */
 .footer {
     background-color: var(--darkbg);
-    margin-top: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
     width: 100% auto;
 }
 .social {
@@ -644,7 +643,7 @@ FOOTER
     font-size: 13px;
     color: var(--gray-04)
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
     .name {
         font-size: 16px;
     }
@@ -708,7 +707,7 @@ ABOUT PAGE
     left: 0;
 }
 /*Mobile*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .places {
         display:none;
     }
@@ -737,7 +736,7 @@ ABOUT PAGE
     margin: 0 auto;
 }
 /*Desktop*/
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1068px) {
     .about-me-container {
         display: flex;
         width: 80%;
@@ -751,4 +750,7 @@ ABOUT PAGE
         width: 30vw;
     }
 
+}
+.bottom-para {
+    margin-top: 3vh !important;
 }
