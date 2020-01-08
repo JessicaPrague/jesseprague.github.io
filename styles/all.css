@@ -635,6 +635,13 @@ FOOTER
     margin: 0 auto;
     text-align: center;
     margin-top: 20px;
+    font-size: 13px;
+    color: var(--gray-04)
+}
+@media screen and (min-width: 700px) {
+    .name {
+        font-size: 16px;
+    }
 }
 #blueStar {
     color: var(--blue);
