@@ -1,0 +1,123 @@
+<!-- Eater -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head -->
+    <head id="top">
+        <meta charset="UTF-8">
+        <title>Eater App • Jessica Prague</title>
+        <meta name="Description" content="Jessica Prague">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Linking CSS -->
+        <link rel="stylesheet" href="styles/all.css" type="text/css">
+
+        <!-- Javascript -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/.eslintrc.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            const header = document.querySelector('.main-header');
+
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY;
+                if(scrollPos > 10) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            })
+
+        </script>
+        <script>
+            /* Scroll button appears on scroll */
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 20) {
+                    $('.scroll-to-top').removeClass('no-display');
+                } else {
+                    $('.scroll-to-top').addClass('no-display');
+                }
+            });
+            /* Smooth Scrolling */
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 500, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <header class="header">
+            <h5 class="jp"><a href="index.html">Jessica Prague</a></h5>
+            <ul class="main-nav">
+                <li><a href="index.html" class="active">Work</a></li>
+                <li><a href="about.html">My Story</a></li>
+                <li><a href="Jessica_Prague_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </header> 
+
+        <!-- Parallax Effect -->
+        <div class="projectParallax" data-parallax="scroll" data-z-index="1" data-image-src="images/eater-dark.png">
+            <div class="paratext">  
+                <h1 class="para1 projectTitle">Eater App</h1>
+                <h6 class="para2 projectTitle2"> Designing a personalized watchlist experience for Eater, a food recommendation app</h6>
+            </div>
+        </div>
+
+        <!-- Case Study -->
+        <div class="thegrid">
+            <div class="flexContainer">
+                <div class="flexText">
+                    <h5 class="pink">Overview</h5>
+                    <p>A feature allowing users to create personalized watchlists to share with friends and make food recommendations.</p>
+                    <h5 class="pink">Team</h5>
+                    <p>5 Engineers, 3 Designers, 1 Project Manager</p>
+                    <h5 class="pink">Role</h5>
+                    <p>Product Design Intern</p>
+
+                    <h5 class="pink">Timeline</h5>
+                    <p>6 Weeks, Summer 2018</p>
+                </div>
+                <div class="flexImage">
+                    <img alt="overview image" src="images/eater/overview-img.png"/>
+                </div>
+            </div>
+           <div class="hr"></div>
+            <h5 class="pink">Context</h5>
+            <h4>About the Project</h4>
+            <p>In July of my summer internship at
+                <a class="pink link" href="https://www.voxmedia.com/a/vm" target="_blank">Vox Media Company</a>
+                , I moved to the Consumer Products team to help design a Progressive Web App for
+                <a class="pink link" href="https://www.eater.com/" target="_blank">Eater</a>
+                , one of Vox's eight media brands. The Eater App offers restaurant recommendations to users based on location, cuisine types, and overall interest. Unlike dining apps like Yelp, content for Eater comes from trusted Eater editors who are on the ground, physically immersed in the world's greatest food cities. I was tasked to create a new feature that will increase engagement and create more of a "food experience" within the app. Working closely with other designers and engineers, I designed a <span class="bold">watchlist feature</span>, which allows users to create and share an assortment of personalized collections of restaurants.
+            </p>
+            <img class="image" src="images/eater/final-design.png" alt="final design"/>
+            <p class="caption">Final Screens</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h4 class="pink line pinkline"><a id="mailto" href="mailto:jnp49@cornell.edu"> 👋 Let's Get In Touch!</a></h4>
+            <div class="social">                
+                <a href="https://www.linkedin.com/in/jessicaprague/" target="_blank"> <img class="icon" src="images/linkedin.png" alt="linkedin"/> </a>
+                <a href="https://medium.com/@jessicaprague/" target="_blank"> <img class="icon" src="images/medium.png" alt="medium"/> </a>
+                <a href="https://twitter.com/jessicaprague" target="_blank"> <img class="icon" src="images/twitter.png" alt="twitter"/> </a>
+                <a href="https://www.instagram.com/jesseprague/" target="_blank"> <img class="icon" src="images/instagramlogo.png" alt="instagram"/> </a>
+            </div>
+            <h6 class="name"><span id="pinkStar">★</span> DESIGNED AND CODED BY JESSICA PRAGUE <span id="pinkStar">★</span></h6>
+        </div>
+    </body>
+</html>

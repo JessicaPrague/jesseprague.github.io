@@ -109,8 +109,8 @@ h4 {
     margin-top: 1vh !important;
 }
 p, li {
-    margin-top: 1vh !important;
-    margin-bottom: 1vh !important;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     line-height: 1.5;
 }
 @media screen and (min-width: 450px) {
@@ -130,7 +130,7 @@ p, li {
         font-size: calc(16px + 4 * ((100vw - 320px) / (680)));
     }
     h6 {
-        font-size: calc(18px + 2 * ((100vw - 320px) / (680)));
+        font-size: calc(16px + 2 * ((100vw - 320px) / (680)));
     }
     p, li {
         font-size: calc(14px + 6 * ((100vw - 320px) / (680)));
@@ -214,6 +214,39 @@ DESIGNS
 =============== */
 .shadow {
     box-shadow: 0 0 12px 0 var(--gray-01);
+}
+.image {
+    width: 80%; 
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-top: 2vh;
+}
+
+.bold {
+    font-weight: bold;
+}
+.caption {
+    margin: 0 auto;
+    text-align: center;
+    color: var(--gray-02);
+    margin-top: -1vh;
+}
+.hr {
+    border-bottom: 1px solid var(--gray-01) !important; 
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+}
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .image {
+        width: 90%; 
+        margin-left: 5%;
+    }
+    .hr {
+        display: none;
+    }
 }
 .link {
     margin: 0 auto;
@@ -382,17 +415,20 @@ PARALLAX
 }
 .parallax {
     min-height: 550px;
-    /*    min-height: 80vh;*/
     background: transparent;
     padding: 20px;
 }
 #marble-para {
     min-height: 350px;
 }
+.projectParallax {
+    min-height: 450px;
+    background: transparent;
+    padding: 20px;
+}
 .paratext {
     padding-top: 14%;
     padding-bottom: 10%;
-
 }
 .para1 {
     z-index: 2;
@@ -409,12 +445,29 @@ PARALLAX
     line-height: 1.45em;
     margin-top: 1vh;
 }
+.projectTitle,
+.projectTitle2 {
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.projectTitle {
+    font-weight: 700;
+}
+.projectTitle2{
+    /*    font-size: 20px;*/
+    font-weight: 500;
+    text-transform: none !important
+}
+/*Mobile Parallax*/
 @media screen and (max-width: 768px) {
     .para2 {
         margin-top: 2vh;
     }
     #marble-para {
         min-height: 200px;
+    }
+    .projectParallax {
+        min-height: 260px;
     }
 }
 
@@ -646,13 +699,21 @@ GET IN TOUCH
     -webkit-transition:width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
     transition: .35s ease-in-out;
 }
+/*Blue Line*/
 .blueline a{
     color: var(--blue) !important;
     text-transform: uppercase;
-
 }
 .blueline a::after {
     background: var(--blue) !important;
+}
+/*Pink Line*/
+.pinkline a{
+    color: var(--pink) !important;
+    text-transform: uppercase;
+}
+.pinkline a::after {
+    background: var(--pink) !important;
 }
 /* ===============
 FOOTER 
@@ -701,6 +762,9 @@ FOOTER
 }
 #blueStar {
     color: var(--blue);
+}
+#pinkStar {
+    color: var(--pink);
 }
 
 /* ===============
@@ -813,8 +877,46 @@ ABOUT PAGE
     .about-me-image img{
         width: 30vw;
     }
-
 }
 .bottom-para {
     margin-top: 3vh !important;
+}
+
+/* ===============
+EATER PAGE 
+=============== */
+.flexContainer {
+    flex-direction: row;
+    /*    width: 90%;*/
+    margin: 0 auto;
+}
+.flexText,
+.flexImage {
+    flex-grow: 1;
+}
+.flexImage {
+    margin: 0 auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: center;
+}
+.flexImage img{
+    width: 50vw;
+    border-radius: 4px;
+    margin: 0 auto !important;
+}
+/*Desktop*/
+@media screen and (min-width: 767px) {
+    .flexContainer {
+        display: flex;
+    }
+    .flexText h5 {
+        margin-top: 3vh !important;
+    }
+    .flexImage img{
+        width: 40vh;
+    }
+    .flexImage {
+        margin-left: 5vw;
+    }
 }
