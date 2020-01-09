@@ -367,7 +367,7 @@ PARALLAX
 }
 .parallax {
     min-height: 550px;
-/*    min-height: 80vh;*/
+    /*    min-height: 80vh;*/
     background: transparent;
     padding: 20px;
 }
@@ -489,26 +489,48 @@ PROJECTS GRID
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(255,255,255, 0.9);
+    transition: .5s ease-in-out;
     border-radius: 10px;
+}
+.eater-overlay {
+    background-color: rgba(198, 103, 109, 0.65); /*Eater background img color w/ .65 opacity*/
+}
+.explornell-overlay {
+    background-color: rgba(148, 110, 221, 0.65); /*Explornell background img color w/ .65 opacity*/
+}
+.instagram-overlay {
+    background-color: rgba(218, 159, 93, 0.75); /*Instagram background img color w/ .65 opacity*/
+}
+.uplift-overlay {
+    background-color: rgba(213, 201, 83, 0.65); /*Uplift background img color w/ .65 opacity*/
+}
+.cureviews-overlay {
+    background-color: rgba(77, 143, 219, 0.70); /*CU Reviews background img color w/ .65 opacity*/
+}
+.dailyui-overlay {
+    background-color: rgba(120, 172, 74, 0.65); /*Daily UI background img color w/ .65 opacity*/
 }
 .image-container:hover .overlay {
     opacity: 1;
+    transition: .5s ease-in-out;
 }
 .image-container:hover {
-    transition: 0.28s;
+    transition: .5s ease-in-out;
     transform: scale(1.01);
 }
 .overlay h3 {
-    color: black;
+    color: white;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    top: 50%;
+    left: 51.5%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+.image-container:hover .overlay h3{
+    animation: slide-up .5s ease-out;
 }
 .overlay img {
     position: absolute;
@@ -663,6 +685,19 @@ ANIMATIONS
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes slide-up {
+    0% {
+        /*        margin-top: 40vh;*/
+        /*        transform: translateY(287%);*/
+        top: 100%;
+    }
+    100% {
+        /*                transform: translateY(-50%);*/
+        /*        margin-top: 0;*/
+
+        top: 50%;
     }
 }
 
