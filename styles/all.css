@@ -1,6 +1,8 @@
 /* Styles */
 
-/* COLORS */
+/* ===============
+COLORS 
+=============== */
 :root {
     --black: #1B1F23;
     --white: #FAFAFA;
@@ -16,11 +18,11 @@
     --text: #333333;
     --pink: #FD7373;
     --yellow: #b8b04d;
+    --purple: rgb(148, 110, 221);
     --cornellred: #f05354;
     --facebookblue: #4267b2;
     --green: #76ad44;
     --orange: #ED9B30;
-
 }
 /*PINK*/
 .pink {
@@ -62,9 +64,22 @@
 .orange:after {
     background-color: var(--orange);
 }
+/*PURPLE*/
+.purple {
+    color: var(--purple) !important;
+}
+/*YELLOW*/
+.yellow {
+    color: var(--yellow) !important;
+}
+/*GREEN*/
+.green {
+    color: var(--green) !important;
+}
 
-
-/*Fonts*/
+/* ===============
+FONTS 
+=============== */
 @font-face {
     font-family: 'SF-Display';
     src: url(../fonts/SF-Pro-Display-Bold.woff);
@@ -474,7 +489,6 @@ PROJECTS GRID
 }
 .image-container img {
     border-radius: 10px;
-    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
     display: block;
 }
 .image-container {
@@ -510,14 +524,6 @@ PROJECTS GRID
 .dailyui-overlay {
     background-color: rgba(120, 172, 74, 0.65); /*Daily UI background img color w/ .65 opacity*/
 }
-.image-container:hover .overlay {
-    opacity: 1;
-    transition: .5s ease-in-out;
-}
-.image-container:hover {
-    transition: .5s ease-in-out;
-    transform: scale(1.01);
-}
 .overlay h3 {
     color: white;
     position: absolute;
@@ -529,9 +535,34 @@ PROJECTS GRID
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.image-container:hover .overlay h3{
-    animation: slide-up .5s ease-out;
+/*Only hover on DESKTOP*/
+@media screen and (min-width: 700px) {
+    .image-container:hover .overlay {
+        opacity: 1;
+        transition: .5s ease-in-out;
+    }
+    .image-container:hover {
+        transition: .5s ease-in-out;
+        transform: scale(1.01);
+    }
+    .image-container:hover .overlay h3{
+        animation: slide-up .5s ease-out;
+    }
+    .mobile-no-hover {
+        display: none !important;
+    }
+    .image-container img {
+        box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.3);
+    }
 }
+
+.mobile-no-hover {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2vh;
+}
+
 .overlay img {
     position: absolute;
     top: 50%;
@@ -551,14 +582,14 @@ PROJECTS GRID
     }
 }
 /*Midway*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
     .image-container {
         width: 41%;
         margin: 20px;
     }    
 }
 /*Desktop*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1300px) {
     .image-container {
         width: 45%;
         margin: 30px;
@@ -623,8 +654,6 @@ GET IN TOUCH
 .blueline a::after {
     background: var(--blue) !important;
 }
-
-
 /* ===============
 FOOTER 
 =============== */
