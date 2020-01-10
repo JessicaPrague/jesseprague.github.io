@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Linking CSS -->
         <link rel="stylesheet" href="styles/all.css" type="text/css">
+        <link rel="stylesheet" href="styles/flickity.css">
+
 
         <!-- Javascript -->
         <script src="js/jquery-3.4.1.min.js"></script>
@@ -18,7 +20,6 @@
         <script src="js/main.js"></script>
         <script src="js/.eslintrc.js"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>
             const header = document.querySelector('.main-header');
 
@@ -56,34 +57,7 @@
                 });
             });
         </script>
-        <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
 
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
-            }
-
-            function currentDiv(n) {
-                showDivs(slideIndex = n);
-            }
-
-            function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("demo");
-                if (n > x.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" w3-white", "");
-                }
-                x[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " w3-white";
-            }
-        </script>
     </head>
 
     <body>
@@ -294,8 +268,31 @@
                     <img class="image" src="images/eater/feature-2.png" alt="Feature 2"/>
                     <p class="caption" style="margin-top: -2vh;">Low-Fidelity Sketches of the Watchlist Feature</p>
                 </div>
+                <div>
+                    <h6 style="margin-top: 3vh;">3. Photos and Instagram</h6>
+                    <p>Attaching user-generated photography and/or Instagram posts with each restaurant.</p>
+                    <img class="image" src="images/eater/feature-3.png" alt="Feature 3"/>
+                    <p class="caption" style="margin-top: -2vh;">Low-Fidelity Sketches of the Photo Feature</p>
+                </div>
+                <h5 class="pink">User Stories</h5>
+                <h4>How Will Users Utilize Each Feature?</h4>
+                <p>
+                    Now that I brainstormed 3 potential features, I analyzed how each of the 3 foodies will use each feature. This helped me understand which feature will be most impactful for the users. 
+                </p>  
+                <img class="image" src="images/eater/features-map.png" alt="Features Map"/>
+                <p>
+                    Next, I paired up each persona with a potential feature and went through user scenarios. The goal was to take these three feature ideas and create actual use-case scenarios on how foodies would iterate through the flow.
+                </p>
+                <div class="pairings">
+                    <p> <span class="bold">1. Watchlists</span> ✕ The <span class="bold" id="obsessive">Obsessive</span> Foodie</p>
+                    <p> <span class="bold">2. Travel guides</span> ✕ The <span class="bold" id="moderate">Moderate</span> Foodie</p>
+                    <p> <span class="bold">3. Photo feature</span> ✕ The <span class="bold" id="casual">casual</span> Foodie</p>
+                </div>
+
+                <!-- Carousel-->
 
             </div>
+
         </div>
 
         <!-- Footer -->
