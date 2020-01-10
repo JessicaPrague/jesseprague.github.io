@@ -76,6 +76,10 @@ COLORS
 .green {
     color: var(--green) !important;
 }
+/*DARK BG*/
+.darkbg {
+    background-color: var(--darkbg) !important;
+}
 
 /* ===============
 FONTS 
@@ -135,6 +139,9 @@ p, li {
     p, li {
         font-size: calc(14px + 6 * ((100vw - 320px) / (680)));
     }
+    .caption {
+        font-size: calc(12px + 6 * ((100vw - 320px) / (680)));
+    }
 }
 
 /*Font Sizes*/
@@ -161,8 +168,11 @@ p, li {
     p, li {
         font-size: 18px;
     }
+    .caption {
+        font-size: 16px !important;
+        opacity: .8;
+    }
 }
-
 
 /* ===============
 GLOBAL 
@@ -176,7 +186,7 @@ img {
 }
 body {
     background-color: var(--lightbg);
-    font-family: 'SF-Display';
+    font-family: 'SF-Display' !important;
     padding: 0;
     margin: 0;
 }
@@ -188,12 +198,27 @@ GRID
     width: 90%;
     margin: 0 auto;
 }
+.content-grid {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: .5em;
+    padding-bottom: .5em;
+
+
+}
 /*Desktop*/
 @media screen and (min-width: 768px) {
     .thegrid {
         width: 80%;
         margin-top: 2em;
         margin-bottom: 2em;
+    }
+    .content-grid {
+        width: 60%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+
     }
 }
 .c12 {
@@ -221,31 +246,38 @@ DESIGNS
     margin-left: 10%;
     margin-top: 2vh;
 }
-
+.centered {
+    text-align: center;
+}
 .bold {
     font-weight: bold;
 }
 .caption {
     margin: 0 auto;
     text-align: center;
-    color: var(--gray-02);
-    margin-top: -1vh;
+    color: var(--gray-03);
+    margin-bottom: 2vh;
 }
 .hr {
     border-bottom: 1px solid var(--gray-01) !important; 
     width: 90%;
     margin: 0 auto;
-    margin-top: 1vh;
+    margin-top: 2vh;
     margin-bottom: 4vh;
+}
+.content-grid ul li {
+    list-style-type: disc;
+    margin-left: 8%;
+}
+.withoutH5 {
+    margin-top: 4vh !important;
+
 }
 /*Mobile*/
 @media screen and (max-width: 768px) {
     .image {
         width: 90%; 
         margin-left: 5%;
-    }
-    .hr {
-        display: none;
     }
 }
 .link {
@@ -463,11 +495,9 @@ PARALLAX
     .para2 {
         margin-top: 2vh;
     }
-    #marble-para {
-        min-height: 200px;
-    }
+    #marble-para,
     .projectParallax {
-        min-height: 260px;
+        min-height: 200px;
     }
 }
 
@@ -596,7 +626,7 @@ PROJECTS GRID
     }
     .image-container:hover {
         transition: .5s ease-in-out;
-        transform: scale(1.01);
+        transform: scale(1.03);
     }
     .image-container:hover .overlay h3{
         animation: slide-up .5s ease-out;
@@ -858,7 +888,8 @@ ABOUT PAGE
     width: 100%;
     border-radius: 4px;
 }
-.about-me-container {
+.about-me-container,
+.about-me-container2 {
     flex-direction: row;
     width: 90%;
     margin: 0 auto;
@@ -867,7 +898,12 @@ ABOUT PAGE
 @media screen and (min-width: 1068px) {
     .about-me-container {
         display: flex;
-        width: 80%;
+        width: 75%;
+        margin-top: 3em;
+        margin-bottom: -3vh;
+    }
+    .about-me-container2 {
+        width: 75%;
         margin-top: 3em;
         margin-bottom: -3vh;
     }
@@ -905,7 +941,7 @@ EATER PAGE
     border-radius: 4px;
     margin: 0 auto !important;
 }
-/*Desktop*/
+/*Desktop Eater Page*/
 @media screen and (min-width: 767px) {
     .flexContainer {
         display: flex;
@@ -919,4 +955,58 @@ EATER PAGE
     .flexImage {
         margin-left: 5vw;
     }
+    .objective {
+        width: 65%; 
+        text-align: center;
+        margin: 0 auto;
+    }
+    .objective-list {
+        width: 70%;
+    }
+}
+.objective {
+    margin-bottom: 3vh;
+}
+.objective-list li{
+    list-style-type: disc;
+}
+.objective-list {
+    width: 93%;
+    margin: 0 auto;
+}
+.twoImages {
+    display: flex;
+}
+.number {
+    margin-right: 1%;
+}
+.quote {
+    font-style: italic;
+    padding-left: 4%;
+    font-size: 16px;
+    border-left: 1px solid var(--gray-02);
+    margin-left: 1vh;
+    color: var(--gray-03) ;
+}
+/*Mobile Eater Page*/
+@media screen and (max-width: 767px) {
+    .quote {
+        font-size: 14px;
+    }
+    .persona-stack {
+        display: none;
+    }
+}
+.biggerimage {
+    margin-top: -3vh;
+}
+/*Desktop Eater Page*/
+@media screen and (min-width: 768px) {
+    .personas {
+        display: none;
+    }
+}
+
+.feature {
+    display: flex;
 }

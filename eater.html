@@ -56,6 +56,34 @@
                 });
             });
         </script>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " w3-white";
+            }
+        </script>
     </head>
 
     <body>
@@ -79,6 +107,7 @@
 
         <!-- Case Study -->
         <div class="thegrid">
+            <!-- Overview -->
             <div class="flexContainer">
                 <div class="flexText">
                     <h5 class="pink">Overview</h5>
@@ -87,7 +116,6 @@
                     <p>5 Engineers, 3 Designers, 1 Project Manager</p>
                     <h5 class="pink">Role</h5>
                     <p>Product Design Intern</p>
-
                     <h5 class="pink">Timeline</h5>
                     <p>6 Weeks, Summer 2018</p>
                 </div>
@@ -95,17 +123,179 @@
                     <img alt="overview image" src="images/eater/overview-img.png"/>
                 </div>
             </div>
-           <div class="hr"></div>
-            <h5 class="pink">Context</h5>
-            <h4>About the Project</h4>
-            <p>In July of my summer internship at
-                <a class="pink link" href="https://www.voxmedia.com/a/vm" target="_blank">Vox Media Company</a>
-                , I moved to the Consumer Products team to help design a Progressive Web App for
-                <a class="pink link" href="https://www.eater.com/" target="_blank">Eater</a>
-                , one of Vox's eight media brands. The Eater App offers restaurant recommendations to users based on location, cuisine types, and overall interest. Unlike dining apps like Yelp, content for Eater comes from trusted Eater editors who are on the ground, physically immersed in the world's greatest food cities. I was tasked to create a new feature that will increase engagement and create more of a "food experience" within the app. Working closely with other designers and engineers, I designed a <span class="bold">watchlist feature</span>, which allows users to create and share an assortment of personalized collections of restaurants.
+            <div class="hr"></div>
+
+        </div>
+
+        <!--Content Grid -->
+        <div class="content-grid">
+            <!-- Context -->
+            <div>
+                <h5 class="pink">Context</h5>
+                <h4>About the Project</h4>
+                <p>In July of my summer internship at
+                    <a class="pink link" href="https://www.voxmedia.com/a/vm" target="_blank">Vox Media Company</a>,
+                    I moved to the Consumer Products team to help design a Progressive Web App for
+                    <a class="pink link" href="https://www.eater.com/" target="_blank">Eater</a>,
+                    one of Vox's eight media brands. The Eater App offers restaurant recommendations to users based on location, cuisine types, and overall interest. Unlike dining apps like Yelp, content for Eater comes from trusted Eater editors who are physically immersed in the world's greatest food cities. I was tasked to create a new feature that will increase engagement and create more of a "food experience" within the app. Working closely with other designers and engineers, I designed a <span class="bold">watchlist feature</span>, which allows users to create and share an assortment of personalized collections of restaurants.
+                </p>
+                <img class="image" src="images/eater/final-design.png" alt="final design"/>
+                <p class="caption">Final Screens</p>
+                <h6 class="centered" style="font-weight: 500;"> Let’s see how I got here 👇🏼</h6> 
+            </div>
+
+            <!-- Getting Started -->
+            <div>
+                <div class="hr"></div>
+                <h5 class="pink">Getting Started</h5>
+                <h4>Understanding the Current Eater App</h4>
+                <p>The Eater App (not yet launched) is a multi-surface product that helps users explore restaurants in their city and discover places to eat. The app currently consists of <span class="bold">3 tabs:</span></p>
+                <img class="image" src="images/eater/current-screens.png" alt="current screens"/>
+                <p class="caption">The 3 current pages</p>
+                <h4 class="withoutH5">The Problem</h4>
+                <p style="font-style: italic; opacity: .8; color: var(--gray-03); text-align: center; margin-bottom: -1vh;">"If you’re looking for good food recommendations, how often and for how long do you see yourself utilizing and engaging with this app?" </p>
+                <img class="image" src="images/eater/the-problem.png" alt="the problem"/>
+                <p>By exploring the app and talking to potential users, I realized that users are limited to only cuisine and location explorations. They must enter the app knowing what they're in the mood for, which causes <span class="bold">(1) low engagement with the app (you must enter with a goal) as well as (2) a limited opportunity for exploring.</span></p>
+            </div>
+        </div>
+
+        <!-- Goal/Objective -->
+        <div class="darkbg">
+            <div class="content-grid" >
+                <h5 class="pink" style="text-align: center;">THE GOAL/OBJECTIVE</h5>
+                <p class="centered objective">To <span class="bold">drive richness</span> and <span class="bold">increase engagement</span> within the App,
+                    creating more of an experience.</p>
+                <h5 class="pink" style="text-align: center;">"How Might We's"</h5>
+                <ul class="objective-list">
+                    <li>How might we increase the amount of time users spend on the app?</li>
+                    <li>How might we make this app more engaging?</li>
+                    <li>How might we make this more of a mouth-watering experience?</li>
+                    <li>How might we get people to feel more excited about what to eat?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- User Research -->
+        <div class="content-grid" >
+            <h5 class="pink">user Research</h5>
+            <h4>Understanding our Users</h4>
+            <p>
+                On approaching this problem, it was important to gain a better grasp of how Eater users discover places to eat. We conducted 7 interviews with individuals who use Eater and had several conversations with casual Eater users. Our goals were to:
             </p>
-            <img class="image" src="images/eater/final-design.png" alt="final design"/>
-            <p class="caption">Final Screens</p>
+            <ul>
+                <li>Understand how users make dining decisions</li>
+                <li>Discover the Eater elements that loyalists care most about (maps, news, individual writers, etc.)</li>
+                <li>Uncover pain points and product opportunities</li>
+            </ul>
+            <h4 class="withoutH5">Affinity Diagram</h4>
+            <p>
+                I then began to map our observations from user interviews in order to pinpoint the underlying themes and trends from research. Using countless post-its, markers, and a whiteboard, I constructed the affinity diagram below. As I presented this to my team, what really stood out to us was the fact that users open about 2-3 different apps (Notes, Maps, Google Sheets, etc.) from the time they research places they'd like to try to when they actually eat out.
+            </p>
+            <img class="image" src="images/eater/affinity-diagram.png" alt="affinity diagram"/>
+            <p class="caption">Digital Version of Affinity Diagram</p>
+            <div class="twoImages">
+                <div class="flex-image">
+                    <img class="image" src="images/eater/creating-the-diagram.jpg" alt="Creating the Affinity Diagram"/>
+                    <p class="caption">Creating the Affinity Diagram</p>
+                </div>
+                <div class="flex-image">
+                    <img class="image" src="images/eater/original-diagram.jpg" alt="Original Affinity Diagram"/>
+                    <p class="caption">Original Affinity Diagram</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Takeaways -->
+        <div class="darkbg">
+            <div class="content-grid">
+                <h5 class="pink">user research takeaways</h5>
+                <h4>Key Findings</h4>
+                <div style="margin-left: 8%;">
+                    <p>
+                        <span class="number bold">1.</span>Eater users like to share and receive restaurant <span class="bold">recommendations from friends.</span>
+                    </p>
+                    <p>
+                        <span class="number bold">2.</span> Users typically <span class="bold">plan meals out ahead of time.</span>
+                    </p>
+                    <p class="quote">
+                        "Earlier in the week, on Mon. or Tues., I will start looking through restaurants and look at different options. I like to plan which meals I am going to eat our versus cook."
+                    </p>
+                    <p>
+                        <span class="number bold">3.</span>Users like to stay organized and <span class="bold">categorize</span> their favorite restaurants.
+                    </p>
+                    <p class="quote">
+                        "I create spreadsheets and use my native 'Notes app' to save ideas for food and restaurants. My lists are more aspirational, and I even have a restaurant bucket list!"
+                    </p>
+                    <p>
+                        <span class="number bold">4.</span><span class="bold">Multiple apps</span> are used to decide where to eat out.
+                    </p>
+                    <p class="quote">
+                        "I keep a ton of lists. A lot of the time I am on Eater I will email myself the articles. If I am on google maps, I keep notes in my cellphone."
+                    </p>
+                    <p>
+                        <span class="number bold">5.</span>Users really <span class="bold">trust</span> Eater's curated lists because the content is edited, so it's reliable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personas-->
+        <div class="content-grid">
+            <h5 class="pink">Personas</h5>
+            <h4>Empathizing with the Target Users</h4>
+            <p>
+                To really get a feel for the target users, I always like to create fictitious personas so that I can jump into the users' shoes and really understand their needs, wants, thoughts, and priorities. The target users typically fall somewhere between this <span class="bold" style="font-style: italic;">Foodie Spectrum:</span>
+            </p>
+            <img class="image" src="images/eater/persona-spectrum.png" alt="the spectrum"/>
+            <p class="caption">I fall somewhere between Lucy and Jackson 😎</p>
+            <div class="personas">
+                <img class="image" src="images/eater/persona-1.png" alt="Persona1"/>
+                <img class="image" src="images/eater/persona-2.png" alt="Persona2"/>
+                <img class="image" src="images/eater/persona-3.png" alt="Persona3"/>
+
+            </div>
+        </div>
+        <img class="image biggerimage persona-stack" src="images/eater/threepersonas.png" alt="Three Personas"/>
+        <div class="content-grid">
+            <p><span class="bold">Obsessive</span> Foodie (Sage)</p>
+            <ul>
+                <li>Extremely passionate about food, always exploring new restaurants and sharing recommendations with friends.</li> 
+                <li>Follows food blogs and keeps up to date with all things food-related.</li>
+            </ul>
+            <p><span class="bold">Moderate</span> Foodie (Jackson)</p>
+            <ul>
+                <li>Likes to dream about mouth-watering food experiences, follows some food Instagram accounts.</li> 
+                <li>Won't go out of his way to experience a new restaurant.</li>
+            </ul>
+            <p><span class="bold">Casual</span> Foodie (Lucy)</p>
+            <ul>
+                <li>Enjoys food, but is unaware of the resources to become a full-fledged foodie.</li> 
+                <li>Relies on friends' recommendations and likes to dine at places that she's already been to.</li>
+            </ul>
+        </div>
+
+        <!-- Brainstorming -->
+        <div class="darkbg">
+            <div class="content-grid">
+                <h5 class="pink">Brainstorming</h5>
+                <h4>Exploring Solutions</h4>
+                <p>
+                    During an hour-long "brainjam" session with my manager, we brainstormed 3 different features that could solve the lack of engagement problem within the app and create this elevated Eater experience.
+                </p>
+                <div>
+                    <h6 style="margin-top: 3vh;">1. Travel Guides</h6>
+                    <p>Seeing cities and hotspots across the world through different stacks of travel-related Eater content, such as "The Hottest Restaurants in Lisbon."</p>
+                    <img class="image" src="images/eater/feature-1.png" alt="Feature 1"/>
+                    <p class="caption" style="margin-top: -2vh;">Low-Fidelity Sketches of the Travel Guide Feature</p>
+                </div>
+                <div>
+                    <h6 style="margin-top: 3vh;">2. Watchlists and Sharing</h6>
+                    <p>Creating personalized collections of lists, like "Brunch Ideas" or "Summer Meals," that users can interact with by creating and editing them, adding restaurants, and sharing with friends.</p>
+                    <img class="image" src="images/eater/feature-2.png" alt="Feature 2"/>
+                    <p class="caption" style="margin-top: -2vh;">Low-Fidelity Sketches of the Watchlist Feature</p>
+                </div>
+
+            </div>
         </div>
 
         <!-- Footer -->
