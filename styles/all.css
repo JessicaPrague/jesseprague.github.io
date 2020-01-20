@@ -11,7 +11,7 @@ COLORS
     --gray-03: #586069;
     --gray-04: #2F363D;
     --gray-05: #1B1F23;
-    --darkbg: #f3f3f3;
+    --darkbg: #F0F0F0;
     --lightbg: #FAFAFA;
 
     --blue: #669CFF;
@@ -625,14 +625,14 @@ PROJECTS GRID
 @media screen and (min-width: 700px) {
     .image-container:hover .overlay {
         opacity: 1;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
     }
     .image-container:hover {
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
         transform: scale(1.03);
     }
     .image-container:hover .overlay h3{
-        animation: slide-up .5s ease-out;
+        animation: slide-up .3s ease-out;
     }
     .mobile-no-hover {
         display: none !important;
@@ -1029,107 +1029,25 @@ EATER PAGE
 
 /*Carousel*/
 
-.mySlides:not(:first-of-type) {
-/*
-    opacity: 0;
-    visibility: hidden;
-*/
-    display: none;
-}
-/*
-.mySlides {
-    display: none
-}
-*/
-.mySlides img {
-    vertical-align: middle;
-}
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: var(--gray-03);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.quote2 {
+    font-style: italic;
+    padding-left: 2%;
+    font-size: 16px;
+    border-left: 1px solid var(--gray-02);
+    margin-left: 4vh;
+    color: var(--gray-03) ;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
 }
 
-/* Caption text */
-.captiontext {
-    color: black;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+.big-image {
+    margin-top: -3vh;
+    margin-bottom: -4vh;
 }
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #ffffff;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #999999;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.activeslide, .dot:hover {
-    background-color: #111111;
-}
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next, .captiontext {font-size: 11px}
-}
-
-
-
-
-.item:not(:first-of-type) {
-    opacity: 0;
-    visibility: hidden;
-}
-.control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
-    opacity: 1;
-    visibility: visible;
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .big-image {
+        margin-top: -1vh;
+        margin-bottom: -2vh;
+    }
 }
