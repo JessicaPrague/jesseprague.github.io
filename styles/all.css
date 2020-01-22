@@ -924,6 +924,7 @@ ABOUT PAGE
 /* ===============
 EATER PAGE 
 =============== */
+
 .flexContainer {
     flex-direction: row;
     /*    width: 90%;*/
@@ -999,6 +1000,9 @@ EATER PAGE
     .persona-stack {
         display: none;
     }
+    .top-of-eater {
+        margin-top: 4vh;
+    }
 }
 .biggerimage {
     margin-top: -3vh;
@@ -1070,7 +1074,7 @@ EATER PAGE
         margin-right: 10px;
     }
     .scrolltext {
-        font-size: calc(12px + 6 * ((100vw - 320px) / (680)));
+        font-size: calc(14px + 6 * ((100vw - 320px) / (680)));
 
     }
 }
