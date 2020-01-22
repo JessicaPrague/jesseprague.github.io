@@ -1028,7 +1028,57 @@ EATER PAGE
 }
 
 /*Carousel*/
+.scroll {
+    padding-top: 1.5em;
+    padding-left: 0.5em;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
 
+.scroll-grid {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: -5vh;
+    margin-bottom: 2vh;
+}
+.scrollphoto {
+    position: relative;
+    /*    margin-bottom: 1.5em;*/
+    width: 55%;
+    border-radius: 0.625vw;
+    transition: 0.28s;
+    box-shadow: 0 0 8px 0 rgba(225,228,232,.5);
+    margin-right: 15px;
+}
+.scrolltext {
+    text-align: center;
+    color: var(--gray-03);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .scroll-grid {
+        width: 100%;  
+        margin-left: 2%;
+        margin-top: -3vh;
+        margin-bottom: 2vh;  
+    }
+    .scrollphoto {
+        width: 70%;
+        margin-right: 10px;
+    }
+    .scrolltext {
+        font-size: calc(12px + 6 * ((100vw - 320px) / (680)));
+
+    }
+}
+
+.scrollphoto:hover {
+    transform: scale(1.01);
+    transition: 0.28s;
+}
 .quote2 {
     font-style: italic;
     padding-left: 2%;
