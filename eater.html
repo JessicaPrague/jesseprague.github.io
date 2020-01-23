@@ -79,12 +79,27 @@
                 <h6 class="para2 projectTitle2"> Designing a personalized watchlist experience for Eater, a food recommendation app</h6>
             </div>
         </div>
+        <div class="top-of-eater"></div>
 
-        <!-- Case Study -->
+        <!-- Jump To -->
         <div class="thegrid">
-            <div class="top-of-eater"></div>
+            <h5 class="pink" style="text-align: center;">Jump To:</h5>
+            <p class="jumped" style="text-align: center;">
+                <span class="jump-to"><a href="#context">Context</a></span> • 
+                <span class="jump-to"><a href="#problem">The Problem</a></span> • 
+                <span class="jump-to"><a href="#research">Research</a></span> • 
+                <span class="jump-to"><a href="#brainstorming">Brainstorming</a></span> • 
+                <span class="jump-to"><a href="#flow">User Flow</a></span> • 
+                <span class="jump-to"><a href="#decisions">Design Decisions</a></span> • 
+                <span class="jump-to"><a href="#finalflow">Final Flow</a></span> • 
+                <span class="jump-to"><a href="#prototypes">Prototypes</a></span> • 
+                <span class="jump-to"><a href="#takeaways">Takeaways</a></span>
+            </p>
+        </div>
+
+        <div class="thegrid">
             <!-- Overview -->
-            <div class="flexContainer">
+            <div class="flexContainer" style="margin-top: 3vh;">
                 <div class="flexText">
                     <h5 class="pink">Overview</h5>
                     <p>A feature allowing users to create personalized watchlists to share with friends and make food recommendations.</p>
@@ -104,7 +119,7 @@
         </div>
 
         <!--Content Grid -->
-        <div class="content-grid">
+        <div class="content-grid" id="context">
             <!-- Context -->
             <div>
                 <h5 class="pink">Context</h5>
@@ -128,7 +143,7 @@
                 <p>The Eater App (not yet launched) is a multi-surface product that helps users explore restaurants in their city and discover places to eat. The app currently consists of <span class="bold">3 tabs:</span></p>
                 <img class="image" src="images/eater/current-screens.png" alt="current screens"/>
                 <p class="caption">The 3 current pages</p>
-                <h4 class="withoutH5">The Problem</h4>
+                <h4 class="withoutH5" id="problem">The Problem</h4>
                 <p style="font-style: italic; opacity: .8; color: var(--gray-03); text-align: center; margin-bottom: -1vh;">"If you’re looking for good food recommendations, how often and for how long do you see yourself utilizing and engaging with this app?" </p>
                 <img class="image" src="images/eater/the-problem.png" alt="the problem"/>
                 <p>By exploring the app and talking to potential users, I realized that users are limited to only cuisine and location explorations. They must enter the app knowing what they're in the mood for, which causes <span class="bold">(1) low engagement with the app (you must enter with a goal) as well as (2) a limited opportunity for exploring.</span></p>
@@ -152,7 +167,7 @@
         </div>
 
         <!-- User Research -->
-        <div class="content-grid" >
+        <div class="content-grid" id="research">
             <h5 class="pink">user Research</h5>
             <h4>Understanding our Users</h4>
             <p>
@@ -252,7 +267,7 @@
 
         <!-- Brainstorming -->
         <div class="darkbg">
-            <div class="content-grid">
+            <div class="content-grid" id="brainstorming">
                 <h5 class="pink">Brainstorming</h5>
                 <h4>Exploring Solutions</h4>
                 <p>
@@ -319,24 +334,19 @@
                 <p>
                     Thus, I decided to move forward with the <span class="bold" id="obsessive">WATCHLIST FEATURE</span> because:
                 </p>
-                <div style="margin-left: 3%;">
-                    <p style="margin-top: 1vh; margin-bottom: 1vh;">
-                        <span class="number">1.</span>
+                <ol style="margin-top: -.3vh;">
+                    <li>
                         It gives users something <span class="bold">actionable</span> to do, making it more of a tangible tool.
-                    </p>
-                    <p style="margin-top: 1vh; margin-bottom: 1vh;">
-                        <span class="number">2.</span>
-                        It can minimize the amount of apps users open use as they research restaurants.
-                    </p>
-                    <p style="margin-top: 1vh; margin-bottom: 1vh;">
-                        <span class="number">3.</span>
+                    </li>
+                    <li>
+                        It can minimize the amount of apps users open use as they research restaurants.</li>
+                    <li>
                         It keeps the user <span class="bold">engaged</span> with the app beyond a simple restaurant search.      
-                    </p>
-                    <p style="margin-top: 1vh; margin-bottom: 1vh;">
-                        <span class="number">4.</span>
+                    </li>
+                    <li>
                         List-making is a natural output of the research and discovery activities of the app.
-                    </p>
-                </div>
+                    </li>
+                </ol>
             </div>
         </div>
 
@@ -353,6 +363,210 @@
             <p>
                 Although different apps, Yelp and Instagram both have a fully-functioning "Collections" feature, where users can create their own unique lists/folders of photos (Instagram) and local businesses (Yelp). While analyzing how Yelp and Instagram execute their "Collections" feature, two things stood out to me that I wanted to emulate in Eater:
             </p>
+            <ol type="A" >
+                <li>
+                    Both apps separate <span class="bold italic">Collections</span> from <span class="bold italic">Favorites</span>. This gives users the opportunity to save or favorite a restaurant, but not necessarily add it to a specific watchlist.
+                </li>
+                <li>
+                    There are <span class="bold">2 different entry points</span>. Users can add and delete items on the Watchlist page (see Figure b above) or directly from each item page (see Figure c).
+                </li>
+            </ol>
+        </div>
+
+        <!-- Info Architecture-->
+        <div class="darkbg">
+            <div class="content-grid">
+                <h5 class="pink">INFORMATION ARCHITECTURE</h5>
+                <h4>User Flow Diagram</h4>
+            </div>
+            <div class="big-image">
+                <img class="image" src="images/eater/user-flow.png" alt="user flow diagram"/>
+            </div>
+            <img class="small-image" src="images/eater/hierarchy.png" alt="hierarchy"/>
+        </div>
+
+        <!-- Design Decisions-->
+        <div class="content-grid">
+            <h5 class="pink">Design Decisions</h5>
+            <h4>Medium-Fidelity Mockups</h4>
+            <h6 class="design-decisions-header"><span class="gradient-text">1.</span> Adding a Restaurant to a Watchlist</h6>
+            <p>
+                After understanding the content requirements as well as the three different pages and their hierarchy, I explored different modals that will pop up as users add a restaurant to a watchlist. 
+            </p> 
+        </div>
+        <div class="big-image">
+            <img class="image" style="width: 90%; margin-left: 5%; margin-top: 3vh;" src="images/eater/adding-restaurants.png" alt="Adding a Restaurant to a Watchlist"/>
+            <p class="caption" style="margin-bottom: 2vh;">Medium-Fidelity "Add to Watchlist" Explorations" feature</p>
+        </div>
+        <div class="content-grid">
+            <p>
+                Explorations <span class="bold">C</span>, <span class="bold">D</span>, &amp; <span class="bold">E</span> felt more natural with desktop, and <span class="bold">D</span> &amp; <span class="bold">F</span> did not give enough priority to the image. Also, <span class="bold">E</span> had too small scrolling space, and <span class="bold">A</span> &amp; <span class="bold">E</span> had no distinction between recent and non-recent watchlists.
+            </p>
+            <p style="margin-top: 2.5vh;">
+                Thus, I decided to pursue <span class="bold">option B</span> because the large containers prioritize the image, and "Recent Watchlists" offers quicker access to more commonly used watchlists.
+            </p>
+            <h6 class="design-decisions-header"> <span class="gradient-text">2.</span> The “Saved” Page – Displays the List of Watchlists </h6>
+            <p>
+                Once a restaurant is added to a watchlist, users can then view their personal watchlists in the "Saved" page. 
+            </p> 
+        </div>
+        <div class="big-image">
+            <img class="image" style="width: 90%; margin-left: 5%; margin-top: 3vh;" src="images/eater/saved-page.png" alt="The Saved Page"/>
+            <p class="caption" style="margin-bottom: 2vh;">Medium-Fidelity Explorations for the Saved Page</p>
+        </div>
+        <div class="content-grid">
+            <p class="bold uppercase">Tradeoffs:</p>
+            <p><span class="bold">A</span> — Cannot fit enough watchlists on the screen; too much scrolling.</p>
+            <p><span class="bold">B</span> — Image avatars are too small (not enough emphasis on the picture); too much room filled up by unnecessary Watchlist metadata.</p>
+            <p><span class="bold">C</span> — Can fit a lot of watchlists at a time; visual element is successful.</p>
+            <p><span class="bold">D</span> — Not enough emphasis on the picture; filters seem useful, but are in fact unnecessary.</p>
+            <p><span class="bold">E</span> — No visuals (uncompelling and isn't enticing to users.)</p>
+            <p style="margin-top: 2.5vh;">
+                As a result, I chose <span class="bold">option C</span>. The narrow shape affords easier scrolling, fitting more Watchlists on the screen at a time. Additionally, the narrow shape with the right-facing arrow is helpful for the user's mental model (skinny watchlist opens up into thicker restaurant containers).
+            </p>
+            <h6 class="design-decisions-header"> <span class="gradient-text">3.</span> The “Watchlist” Page – Displays the Watchlist Details</h6>
+            <p>
+                Clicking on a Watchlist brings the user to this watchlist details page, which contains the watchlist title card on the top (title, details, settings) and a list of all the watchlist's restaurants. I explored a bucket view (<span class="bold">A</span>) and a list view (<span class="bold">B</span>). 
+            </p>
+        </div>
+        <div class="big-image">
+            <img class="image smaller" src="images/eater/watchlist-page.png" alt="The Watchlist Page"/>
+            <p class="caption" style="margin-bottom: 2vh; margin-top: 1vh;">Medium-Fidelity Explorations for the Watchlist Page</p>
+        </div>
+        <div class="content-grid">
+            <p>
+                Deciding between the two explorations, I landed on <span class="bold">option A</span> because of the  successful visual element. Images are what we want to prioritize, as the zoomed-in photos offers this emotional, mouth-watering connection to the food, making users want to dive into the experience. With the small thumbnail photos in <span class="bold">B</span>, users are not able to see enough of the food for it to be useful.
+            </p>
+            <h6 class="design-decisions-header"> <span class="gradient-text">4.</span> Scrolling Through the Restaurants of the Watchlist</h6>
+            <p>
+                By clicking on a particular restaurant, users are brought into a deeper watchlist view. Think <a class="link pink" href="https://www.spotify.com/us/">Spotify</a> playlists — you can view the overall playlist details and all the songs in it (the watchlist page), and you can also surf through the playlist by clicking on a song and swiping left/right (these restaurant pages).
+            </p>
+        </div>
+        <div class="big-image">
+            <img class="image smaller" src="images/eater/watchlists.png" alt="The Restaurant Page"/>
+            <p class="caption" style="margin-bottom: 2vh;">Medium-Fidelity Explorations for the Restaurant Page</p>
+        </div>
+        <div class="content-grid">
+            <p>
+                I asked users which exploration was best for conveying that they are within a watchlist, swiping through the different restaurants. Users favored <span class="bold">A</span> &amp; <span class="bold">B</span> because the red watchlist title card lets you have top-level access to the watchlist from within — it offers a sense of hierarchy. Between A &amp; B, I decided to pursue <span class="bold">option B</span> because it is easy to see that you can swipe horizontally.
+            </p>        
+        </div>
+
+        <!-- Visual Design-->
+        <div class="darkbg">
+            <div class="content-grid">
+                <h5 class="pink">Visual Design</h5>
+                <h4>Feedback, Iterations, &amp; Micro-interactions</h4>
+                <p>
+                    Through user testing and several team meetings, I continued to iterate on the designs, shifting to high fidelity.
+                </p>
+            </div>
+            <div class="big-image">
+                <img class="image smaller" style="margin-bottom: 2vh;" src="images/eater/revisions1.png" alt="Revisions"/>
+            </div>
+            <div class="content-grid">
+                <p class="bold uppercase">Revisions:</p>
+                <ol>
+                    <li>
+                        Created a "Settings" section on the top of the Watchlist page, so the number of restaurants in the Watchlist underneath.
+                    </li>
+                    <li>
+                        Removed the Eater-generated metadata because a restaurant can belong to multiple (ex: <a class="link pink" href="https://ny.eater.com/venue/11022/katz-s-delicatessen" target="_blank">Katz's Deli</a> is included in "<a class="link pink" href="https://ny.eater.com/maps/classic-restaurants-nyc" target="_blank">29 Classic Restaurants Every New Yorker Must Try</a>" and "<a class="pink link" href="https://ny.eater.com/maps/best-new-york-restaurants-38-map" target="_blank">The 38 Essential NY Restaurants</a>").
+                    </li>
+                    <li>Added the red active-state Watchlist button, so users have the ability to delete each restaurant from the Watchlist by clicking on the button.</li>
+                </ol>
+            </div>
+            <div class="big-image">
+                <img class="image smaller2" src="images/eater/revisions2.png" alt="Revisions2"/>
+            </div>
+            <div class="content-grid">
+                <h6 style="margin-top: 4vh;">When Should We Prompt Users to Log In?</h6>
+                <p style="margin-bottom: -1vh;">With this Watchlist feature, there is value proposition for a logged-in experience. I created this flow chart to figure out when the app should ask users to log in / sign up.</p>
+            </div>
+            <div class="big-image">
+                <img class="image" src="images/eater/login-flow.png" alt="Login Flow"/>
+            </div>
+            <div class="content-grid">
+                <p style="margin-top: 4vh;">
+                    Since there are 2 entry points to view/edit Watchlists, I decided to design two login screens — a full-screen version and a slide-up modal. This way, when a user is not signed in wants to add a restaurant to a watchlist, they won't be transferred to the saved page, but a login modal will slide up over the restaurant page, pictured below.
+                </p>
+                <img class="image" src="images/eater/login.png" alt="login interactions"/>
+                <p class="caption">Login Interactions</p>
+                <p class="quote">
+                    My intention was to always tie the login experience with an action (adding restaurant to a Watchlist), so that logging in doesn't seem like an annoyance to the user, but adds to the overall personalized experience.
+                </p>
+                <p style="margin-top: 3vh;">
+                    I chose red as the login screen background because it makes this easy red/white dichotomy of red background = logged out, and white background = logged in.
+                </p>
+                <h6 class="design-decisions-header">How Can Users Share Watchlists With Friends?</h6>
+                <p>Another interaction with this feature is the ability to share watchlists with friends via email, text, or sending in-app. I explored how the screens will look when a user clicks "Share with Friends."</p>
+                <img class="image" src="images/eater/share-with-friends.png" alt="share with friends"/>
+                <p class="caption">First &amp; Final Iterations of "Sharing with Friends" Interaction</p>
+                <p style="margin-top: 3vh;">
+                    In designing these screens, I initially thought it'd be simpler and more intuitive to allow the user to search for a friend's username in-line. I tested this out using paper prototypes and realized that users were confused with in-line search.  They asked, "Where would I be taken when I search for a friend's name? What if I want to send a watchlist to more than one user at a time?"
+                </p>
+                <p style="margin-top: 2.5vh;">
+                    With this confusion, I decided to separate this interaction into 2 screens. When users click "Send to Another Eater," they are transported to an Instagram-like page that allows them to search for other Eaters (friends). This alternative feels <span class="bold">less cramped</span>, and including 'Recent Eaters' is much more <span class="bold">convenient</span>. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Final Flow-->
+        <div class="content-grid">
+            <h5 class="pink">Final Flow</h5>
+            <h4>Final Watchlist Interaction</h4>
+        </div>
+        <div class="bigger">
+            <img class="finalflowimage" src="images/eater/final-flow.png" alt="final flow"/>
+            <p class="caption">Final Flow of the Watchlist Feature</p>
+        </div>
+        <div class="bigger">
+            <img class="image smaller" src="images/eater/final-share-flow.png" alt="final share flow"/>
+            <p class="caption">Final Flow of "Share with Friends"</p>
+        </div>
+
+        <!-- Prototypes-->
+        <div class="darkbg">
+            <div class="content-grid">
+                <h5 class="pink">INTERACT WITH SCREENS</h5>
+                <h4>Prototypes</h4>
+                <p>
+                    You can interact with the two prototypes below by clicking on the Watchlist (fork &amp; spoon) button. Or, you can interact with the watchlist flow <a class="bold link pink" href="https://projects.invisionapp.com/share/G3NGS156W8F#/screens/315066821" target="_blank">here</a> and the login flow <a class="bold link pink" href="https://projects.invisionapp.com/share/BCNNGJ9PGKZ#/screens" target="_blank">here</a>.
+                </p>
+            </div>
+            <div class="twoprotos">
+                <iframe width="442" height="935" src="//invis.io/FKNE7Y9PJ6N" frameborder="0" allowfullscreen></iframe>
+                <iframe width="442" height="935" src="//invis.io/4YNNGJAFG73" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Conclusion-->
+        <div class="content-grid">
+            <h5 class="pink">Conclusion</h5>
+            <h4>Reflection &amp; Takeaways</h4>
+            <p>
+                This project helped me understand that design must <span class="italic">always</span> be intentional. All  design decisions must be backed up by reasoning, and just because something looks aesthetically beautiful doesn’t mean it’s the best solution to your problem. The Eater App is planned to launch this fall, and the designs of this watchlist feature this will be implemented in the minimum viable product.
+            </p>
+        </div>
+
+        <!-- Next Steps-->
+        <div class="darkbg" style="margin-bottom: 0;">
+            <div class="content-grid" style="margin-bottom: 0 !important;">
+                <h4>Next Steps</h4>
+                <img class="image" src="images/eater/next-steps.png" alt="next steps"/>
+            </div>
+        </div>
+
+        <!-- More of my Projects-->
+        <div class="content-grid" style="margin-bottom: -4vh;">
+            <h5 class="pink" style="text-align: center;">More of my Projects</h5>
+            <h6 class="more-projects">
+                <a class="more-projects-pink" href="explornell.html">Explornell</a> /
+                <a class="more-projects-pink" href="https://blog.usejournal.com/instagram-concept-hashtag-filters-253708c35bd6" target="_blank">Instagram Hashtag Filters</a> /
+                <a class="more-projects-pink" href="uplift.html">Uplift</a> /
+                <a class="more-projects-pink" href="https://www.cureviews.org/" target="_blank">CU Reviews</a> /
+                <a class="more-projects-pink" href="dailyui.html">Daily UI</a>
+            </h6>
         </div>
 
         <!-- Footer -->

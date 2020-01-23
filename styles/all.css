@@ -252,6 +252,12 @@ DESIGNS
 .bold {
     font-weight: bold;
 }
+.uppercase {
+    text-transform: uppercase;
+}
+.italic {
+    font-style: italic;
+}
 .medium {
     font-weight: 500;
 }
@@ -489,7 +495,6 @@ PARALLAX
     font-weight: 700;
 }
 .projectTitle2{
-    /*    font-size: 20px;*/
     font-weight: 500;
     text-transform: none !important
 }
@@ -501,6 +506,9 @@ PARALLAX
     #marble-para,
     .projectParallax {
         min-height: 200px;
+    }
+    .projectTitle2{
+        font-size: 16px;
     }
 }
 
@@ -924,6 +932,24 @@ ABOUT PAGE
 /* ===============
 EATER PAGE 
 =============== */
+.jumped {
+    color: grey;
+}
+.jump-to a{
+    transition: .1s ease-in-out;
+    font-weight: 500;
+    text-decoration: none !important;
+    color: black;
+    letter-spacing: .2px;
+    border-bottom: none;
+    padding: 3px;
+    transition: .3s ease-in-out;
+    font-size: 100%;
+    line-height: 1em;
+}
+.jump-to a:hover{
+    border-bottom: 3px solid #FFA6A6 !important;
+}
 
 .flexContainer {
     flex-direction: row;
@@ -990,7 +1016,8 @@ EATER PAGE
     font-size: 16px;
     border-left: 1px solid var(--gray-02);
     margin-left: 1vh;
-    color: var(--gray-03) ;
+    color: var(--gray-03);
+    opacity: .8;
 }
 /*Mobile Eater Page*/
 @media screen and (max-width: 767px) {
@@ -1098,10 +1125,115 @@ EATER PAGE
     margin-top: -3vh;
     margin-bottom: -4vh;
 }
+.small-image {
+    width: 50%; 
+    margin: 0 auto;
+    margin-left: 30%;
+    margin-top: -2vh;
+    padding-bottom: 2em;
+}
 /*Mobile*/
 @media screen and (max-width: 768px) {
     .big-image {
         margin-top: -1vh;
         margin-bottom: -2vh;
     }
+    .small-image {
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 10%;
+        margin-bottom: .5em;
+    }
+}
+
+ol li{
+    padding-left: 8px;
+}
+.pair {
+    text-align: center;
+}
+.design-decisions-header {
+    margin-top: 5vh;
+}
+.gradient-text {
+    background: -webkit-linear-gradient(var(--gray-02), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.smaller {
+    width: 65%; 
+    margin-left: 18%; 
+    margin-top: 3vh;
+}
+.smaller2 {
+    width: 45%; 
+    margin-left: 28%; 
+    margin-top: 3vh;
+}
+.finalflowimage {
+    width: 90%; 
+    margin: 0 auto;
+    margin-left: 5%;
+    margin-top: 2vh;
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .smaller {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .smaller2 {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+}
+
+.twoprotos {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    iframe {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* ===============
+MORE OF MY PROJECTS 
+=============== */
+.home-pink {
+    text-align: center;
+}
+.home-pink a{
+    text-align: center; 
+    margin-top: 4vh; 
+    margin-bottom: -4vh; 
+    font-weight: bold;
+    transition: .35s ease-in-out;
+    padding: 4px;
+    color: black;
+}
+.home-pink a:hover {
+    background-color: rgba(253, 115, 115, 0.6); /* opacity .6 of pink*/
+}
+
+.more-projects {
+    text-align: center; 
+    color: var(--gray-02); 
+    font-weight: normal; 
+    margin-top: 2vh;
+}
+.more-projects-pink {
+    font-weight: bold;
+    color: black;
+    transition: .35s ease-in-out;
+    padding: 4px;
+    line-height: 2em;
+}
+.more-projects-pink:hover {
+    background-color: rgba(253, 115, 115, 0.4); /* opacity .4 of pink*/
 }
