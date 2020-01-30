@@ -1027,7 +1027,7 @@ EATER PAGE
     .persona-stack {
         display: none;
     }
-    .top-of-eater {
+    .top-of-page {
         margin-top: 4vh;
     }
 }
@@ -1195,37 +1195,32 @@ ol li{
     margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+
+/*Desktop*/
+@media screen and (min-width: 1233px) {
     iframe {
         margin-left: 5%;
         margin-right: 5%;
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .twoprotos {
+        display: none;
+    }
+}
+
 /* ===============
 MORE OF MY PROJECTS 
 =============== */
-.home-pink {
-    text-align: center;
-}
-.home-pink a{
-    text-align: center; 
-    margin-top: 4vh; 
-    margin-bottom: -4vh; 
-    font-weight: bold;
-    transition: .35s ease-in-out;
-    padding: 4px;
-    color: black;
-}
-.home-pink a:hover {
-    background-color: rgba(253, 115, 115, 0.6); /* opacity .6 of pink*/
-}
-
 .more-projects {
     text-align: center; 
     color: var(--gray-02); 
     font-weight: normal; 
     margin-top: 2vh;
+}
+.more-projects a {
+    line-height: 1.7em;
 }
 .more-projects-pink {
     font-weight: bold;
@@ -1234,6 +1229,10 @@ MORE OF MY PROJECTS
     padding: 4px;
     line-height: 2em;
 }
-.more-projects-pink:hover {
-    background-color: rgba(253, 115, 115, 0.4); /* opacity .4 of pink*/
+
+/*Desktop*/
+@media screen and (min-width: 768px) {
+    .more-projects-pink:hover {
+        background-color: rgba(253, 115, 115, 0.4); /* opacity .4 of pink*/
+    }
 }
