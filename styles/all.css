@@ -292,36 +292,43 @@ DESIGNS
 .link {
     margin: 0 auto;
     padding: 0;
-    transition: all 0.2s ease-in-out;
     position: relative;
 }
-.link:before,
-.link:after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    width: 0px;
-    height: 2px;
-    margin: 5px 0 0;
-    transition:  all 0.2s ease-in-out;
-    transition-duration: 0.5s;
-    opacity: 0;
+/*Desktop*/
+@media screen and (min-width: 768px) {
+    .link {
+        transition: all 0.2s ease-in-out;
+
+    }
+    .link:before,
+    .link:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        width: 0px;
+        height: 2px;
+        margin: 5px 0 0;
+        transition:  all 0.2s ease-in-out;
+        transition-duration: 0.5s;
+        opacity: 0;
+    }
+    .link:before {
+        left: 50%;
+    }
+    .link:after {
+        right: 50%;
+    }
+    .link:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+    .link:hover:before,
+    .link:hover:after {
+        width: 50%;
+        opacity: 1;
+    }
 }
-.link:before {
-    left: 50%;
-}
-.link:after {
-    right: 50%;
-}
-.link:hover {
-    cursor: pointer;
-    opacity: .8;
-}
-.link:hover:before,
-.link:hover:after {
-    width: 50%;
-    opacity: 1;
-}
+
 .justify {
     text-align: justify;
 }
@@ -505,7 +512,8 @@ PARALLAX
     }
     #marble-para,
     .projectParallax {
-        min-height: 200px;
+        min-height: 100px;
+        /*        min-width: 100%;*/
     }
     .projectTitle2{
         font-size: 16px;
@@ -1194,9 +1202,33 @@ ol li{
     width: 90%;
     margin: 0 auto;
 }
+/*Mobile Prototypes*/
+@media screen and (max-width: 1000px) {
+    .prototype-desktop {
+        display: none;
+    }
+}
+/*Desktop Prototypes*/
+@media screen and (min-width: 1000px) {
+    .prototype-mobile {
+        display: none;
+    }
+}
+.proimage {
+    flex: 50%;
+}
+.proto-images {
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    padding-right: 7vw;
+    padding-left: 3vw;
+}
 
+.proto-images img {
+    width: 90%;
+}
 
-/*Desktop*/
 @media screen and (min-width: 1233px) {
     iframe {
         margin-left: 5%;
