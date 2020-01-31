@@ -17,7 +17,7 @@ COLORS
     --blue: #669CFF;
     --text: #333333;
     --pink: #FD7373;
-    --yellow: #b8b04d;
+    --yellow: #D8CF5F;
     --purple: rgb(148, 110, 221);
     --cornellred: #f05354;
     --facebookblue: #4267b2;
@@ -68,13 +68,25 @@ COLORS
 .purple {
     color: var(--purple) !important;
 }
+.purple:before,
+.purple:after {
+    background-color: var(--purple);
+}
 /*YELLOW*/
 .yellow {
     color: var(--yellow) !important;
 }
+.yellow:before,
+.yellow:after {
+    background-color: var(--yellow);
+}
 /*GREEN*/
 .green {
     color: var(--green) !important;
+}
+.green:before,
+.green:after {
+    background-color: var(--green);
 }
 /*DARK BG*/
 .darkbg {
@@ -203,8 +215,6 @@ GRID
     margin: 0 auto;
     padding-top: .5em;
     padding-bottom: .5em;
-
-
 }
 /*Desktop*/
 @media screen and (min-width: 768px) {
@@ -280,8 +290,8 @@ DESIGNS
 }
 .withoutH5 {
     margin-top: 4vh !important;
-
 }
+
 /*Mobile*/
 @media screen and (max-width: 768px) {
     .image {
@@ -298,7 +308,6 @@ DESIGNS
 @media screen and (min-width: 768px) {
     .link {
         transition: all 0.2s ease-in-out;
-
     }
     .link:before,
     .link:after {
@@ -333,6 +342,37 @@ DESIGNS
     text-align: justify;
 }
 
+
+/* ===============
+SCROLL TO TOP 
+=============== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 11%;
+    right: 4em;
+    z-index: 99;
+    width: 1.5em;
+    height:1.5em;
+    cursor: pointer;
+    outline: none !important;
+    background: url(../icons/up.svg) center / contain no-repeat;
+    opacity: 0.45;
+    transition: 0.28s;
+}
+.scroll-to-top:hover {
+    opacity: 1;
+    transition: 0.28s;
+}
+.scroll-to-top.no-display {
+    opacity: 0;
+}
+
+/*mobile*/
+@media screen and (max-width: 768px) {
+    .scroll-to-top {
+        display: none;
+    }
+}
 
 /* ===============
 NAVIGATION 
@@ -768,6 +808,25 @@ GET IN TOUCH
 .pinkline a::after {
     background: var(--pink) !important;
 }
+/*Yellow Line*/
+.yellowline a{
+    color: var(--yellow) !important;
+    text-transform: uppercase;
+}
+.yellowline a::after {
+    background: var(--yellow) !important;
+}
+/*Green Line*/
+.greenline a{
+    color: var(--green) !important;
+    text-transform: uppercase;
+}
+.greenline a::after {
+    background: var(--green) !important;
+}
+
+
+
 /* ===============
 FOOTER 
 =============== */
@@ -818,6 +877,12 @@ FOOTER
 }
 #pinkStar {
     color: var(--pink);
+}
+#yellowStar {
+    color: var(--yellow);
+}
+#greenStar {
+    color: var(--green);
 }
 
 /* ===============
@@ -948,24 +1013,22 @@ EATER PAGE
     color: grey;
 }
 .jump-to a{
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
     font-weight: 500;
     text-decoration: none !important;
     color: black;
     letter-spacing: .2px;
     border-bottom: none;
     padding: 3px;
-    transition: .3s ease-in-out;
     font-size: 100%;
     line-height: 1em;
 }
 .jump-to a:hover{
-    border-bottom: 3px solid #FFA6A6 !important;
+    color: var(--pink);
 }
 
 .flexContainer {
     flex-direction: row;
-    /*    width: 90%;*/
     margin: 0 auto;
 }
 .flexText,
@@ -1102,7 +1165,7 @@ EATER PAGE
 /*Mobile*/
 @media screen and (max-width: 768px) {
     .scroll-grid {
-        width: 100%;  
+        width: 90%;  
         margin-top: -3vh;
         margin-bottom: 2vh;  
     }
@@ -1261,11 +1324,14 @@ MORE OF MY PROJECTS
 .more-projects a {
     line-height: 1.7em;
 }
-.more-projects-pink {
+.more-projects-pink,
+.more-projects-yellow,
+.more-projects-green {
     font-weight: bold;
     color: black;
     transition: .35s ease-in-out;
-    padding: 4px;
+    padding: 5px;
+    border-radius: 4px;
     line-height: 2em;
 }
 
@@ -1273,5 +1339,44 @@ MORE OF MY PROJECTS
 @media screen and (min-width: 768px) {
     .more-projects-pink:hover {
         background-color: rgba(253, 115, 115, 0.4); /* opacity .4 of pink*/
+
+    }
+    .more-projects-yellow:hover {
+        background-color: rgba(216, 207, 95, 0.4); /* opacity .4 of yellow*/
+    }
+    .more-projects-green:hover {
+        background-color: rgba(118, 173, 68, 0.4); /* opacity .4 of yellow*/
     }
 }
+
+/* ===============
+UPLIFT PAGE 
+=============== */
+
+/* ===============
+DAILY UI 
+=============== */
+.daily-image {
+    flex: 40%;
+/*    margin: 10px;*/
+}
+.daily-image h6, 
+.daily-image p {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .daily-image {
+        flex: 100%;
+    }
+}
+/*
+.story-photo {
+    flex: 33.33%;
+}
+.story-photo img {
+    border-radius: 4px;
+}*/

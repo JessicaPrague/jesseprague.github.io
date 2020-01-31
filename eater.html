@@ -11,12 +11,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Linking CSS -->
         <link rel="stylesheet" href="styles/all.css" type="text/css">
+        <link href="styles/lightbox.css" rel="stylesheet" />
+        <link href="styles/lightbox.min.css" rel="stylesheet" />
 
         <!-- Javascript -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/parallax.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/.eslintrc.js"></script>
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+        <script src="js/lightbox.js"></script>
+        <script src="js/lightbox.min.js"></script>
         <script>
             const header = document.querySelector('.main-header');
 
@@ -195,7 +200,7 @@
 
         <!-- Takeaways -->
         <div class="darkbg">
-            <div class="content-grid" id="takeaways">
+            <div class="content-grid">
                 <h5 class="pink">user research takeaways</h5>
                 <h4>Key Findings</h4>
                 <div style="margin-left: 8%;">
@@ -316,6 +321,25 @@
             </div>
             <p class="scrolltext">Scroll ➡️</p>
         </div>
+
+        <!--
+<div class="grid">
+<a class="story-photo" href="images/eater/user-story-1.png" data-lightbox="user-story" data-title="User Story 1">
+<img class="image shadow" src="images/eater/user-story-1.png" alt="user-story-1"/>
+</a>
+<a class="story-photo" href="images/eater/user-story-2.png" data-lightbox="user-story" data-title="User Story 2">
+<img class="image" src="images/eater/user-story-2.png" alt="user-story-2"/>
+</a>
+<a class="story-photo" href="images/eater/user-story-3.png" data-lightbox="user-story" data-title="User Story 3">
+<img class="image" src="images/eater/user-story-3.png" alt="user-story-3"/>
+</a>
+</div>
+-->
+
+
+
+
+
 
         <!-- Choosing the Feature-->
         <div class="darkbg">
@@ -551,7 +575,7 @@
         </div>
 
         <!-- Conclusion-->
-        <div class="content-grid">
+        <div class="content-grid" id="takeaways">
             <h5 class="pink">Conclusion</h5>
             <h4>Reflection &amp; Takeaways</h4>
             <p>
@@ -590,5 +614,7 @@
             </div>
             <h6 class="name"><span id="pinkStar">★</span> DESIGNED AND CODED BY JESSICA PRAGUE <span id="pinkStar">★</span></h6>
         </div>
+        <!-- Scroll To Top -->
+        <a href="#top" aria-label="scroll to top" class="scroll-to-top"></a>
     </body>
 </html>
