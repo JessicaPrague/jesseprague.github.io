@@ -513,11 +513,15 @@ PARALLAX
     #marble-para,
     .projectParallax {
         min-height: 100px;
-        /*        min-width: 100%;*/
     }
     .projectTitle2{
         font-size: 16px;
     }
+    /*
+    .parallax-slider {
+    width: 100% ;
+}
+    */
 }
 
 /*Cornell FB Underline*/
@@ -677,7 +681,7 @@ PROJECTS GRID
 }
 
 /*Mobile*/
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 375px) {
     .image-container {
         width: 85%;
         margin: 12.5px 25px;
@@ -791,7 +795,7 @@ FOOTER
 }
 
 /*Mobile Footer*/
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 375px) {
     .icon {
         width: 55px;
     }
@@ -1082,7 +1086,6 @@ EATER PAGE
 }
 .scrollphoto {
     position: relative;
-    /*    margin-bottom: 1.5em;*/
     width: 55%;
     border-radius: 0.625vw;
     transition: 0.28s;
@@ -1100,7 +1103,6 @@ EATER PAGE
 @media screen and (max-width: 768px) {
     .scroll-grid {
         width: 100%;  
-        margin-left: 2%;
         margin-top: -3vh;
         margin-bottom: 2vh;  
     }
@@ -1114,9 +1116,12 @@ EATER PAGE
     }
 }
 
-.scrollphoto:hover {
-    transform: scale(1.01);
-    transition: 0.28s;
+/*Desktop*/
+@media screen and (min-width: 768px) {
+    .scrollphoto:hover {
+        transform: scale(1.01);
+        transition: 0.28s;
+    }
 }
 .quote2 {
     font-style: italic;
