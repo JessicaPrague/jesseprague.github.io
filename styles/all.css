@@ -1032,20 +1032,29 @@ EATER PAGE
     margin: 0 auto;
 }
 .flexText,
-.flexImage {
+.flexImage,
+.flexImage-bigger {
     flex-grow: 1;
 }
-.flexImage {
+.flexImage,
+.flexImage-bigger {
     margin: 0 auto;
     margin-top: 3vh;
     margin-bottom: 3vh;
     text-align: center;
 }
-.flexImage img{
+.flexImage img {
     width: 50vw;
     border-radius: 4px;
     margin: 0 auto !important;
 }
+.flexImage-bigger img{
+    margin: 0 auto !important;
+    width: 65vw;
+    border-radius: 10px;
+}
+
+
 /*Desktop Eater Page*/
 @media screen and (min-width: 767px) {
     .flexContainer {
@@ -1054,10 +1063,14 @@ EATER PAGE
     .flexText h5 {
         margin-top: 3vh !important;
     }
-    .flexImage img{
+    .flexImage img {
         width: 40vh;
     }
-    .flexImage {
+    .flexImage-bigger img {
+        width: 40vw;
+    }
+    .flexImage,
+    .flexImage-bigger{
         margin-left: 5vw;
     }
     .objective {
@@ -1162,6 +1175,19 @@ EATER PAGE
     font-size: 17px;
 }
 
+.story-photo {
+    flex: 33.33%;
+    margin-bottom: 4vh;
+    margin-top: -2vh;
+
+}
+.story-photo img {
+    border-radius: 4px;
+
+
+}
+
+
 /*Mobile*/
 @media screen and (max-width: 768px) {
     .scroll-grid {
@@ -1175,7 +1201,9 @@ EATER PAGE
     }
     .scrolltext {
         font-size: calc(14px + 6 * ((100vw - 320px) / (680)));
-
+    }
+    .story-photo {
+        flex: 100%;
     }
 }
 
@@ -1184,6 +1212,10 @@ EATER PAGE
     .scrollphoto:hover {
         transform: scale(1.01);
         transition: 0.28s;
+    }
+    .story-photo:hover {
+        transform: scale(1.02);
+        transition: .3s;
     }
 }
 .quote2 {
@@ -1352,13 +1384,16 @@ MORE OF MY PROJECTS
 /* ===============
 UPLIFT PAGE 
 =============== */
+.overview {
+    border-radius: 10px;
+}
 
 /* ===============
 DAILY UI 
 =============== */
 .daily-image {
     flex: 40%;
-    /*    margin: 10px;*/
+
 }
 .hover:hover {
     transition: .3s ease-in-out;
@@ -1377,10 +1412,4 @@ DAILY UI
         flex: 100%;
     }
 }
-/*
-.story-photo {
-flex: 33.33%;
-}
-.story-photo img {
-border-radius: 4px;
-}*/
+
