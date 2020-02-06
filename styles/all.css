@@ -414,10 +414,7 @@ a {
     color: var(--gray-02);
     font-weight: 500;
 }
-.main-nav a:hover {
-    color: var(--gray-02);
-    transition: .5s ease-in-out;
-}
+
 .main-nav .active {
     color: var(--darkbg);
 }
@@ -438,6 +435,7 @@ a {
         max-width: 1150px;
     }
 }
+/*Desktop*/
 @media (min-width: 768px) {
     .header {
         flex-direction: row;
@@ -453,6 +451,10 @@ a {
     .main-nav {
         margin-right: 40px;
         margin-top: 10px;
+    }
+    .main-nav a:hover {
+        color: var(--gray-02);
+        transition: .5s ease-in-out;
     }
     .jp {
         margin-left: 40px;
@@ -477,7 +479,7 @@ a {
     header a {
         position: relative;
     }
-    header a:after {
+    header a:after{
         content: '';
         position: absolute;
         width: 0; height: 3px;
