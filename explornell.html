@@ -1,0 +1,117 @@
+<!-------------------Explornell------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-------------------Head------------------->
+    <head id="top">
+        <meta charset="UTF-8">
+        <title>Explornell • Jessica Prague</title>
+        <meta name="Description" content="Jessica Prague">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-------------------Linking CSS------------------->
+        <link rel="stylesheet" href="styles/all.css" type="text/css">
+
+        <!-------------------Javascript------------------->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script>
+            /* Scroll button appears on scroll */
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 20) {
+                    $('.scroll-to-top').removeClass('no-display');
+                } else {
+                    $('.scroll-to-top').addClass('no-display');
+                }
+            });
+            /* Smooth Scrolling */
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 500, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <!-------------------Navigation------------------->
+        <header class="header">
+            <h5 class="jp"><a href="index.html">Jessica Prague</a></h5>
+            <ul class="main-nav">
+                <li><a href="index.html" class="active">Work</a></li>
+                <li><a href="about.html">My Story</a></li>
+                <li><a href="Jessica_Prague_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </header> 
+
+        <!-------------------Parallax Effect------------------->
+        <div class="projectParallax" data-parallax="scroll" data-z-index="1" data-image-src="images/explornell-dark.png">
+            <div class="paratext">  
+                <h1 class="para1 projectTitle">Explornell</h1>
+                <h6 class="para2 projectTitle2">...</h6>
+            </div>
+        </div>
+        <div class="top-of-page"></div>
+
+        <div class="thegrid">
+            <!-------------------Overview------------------->
+            <div class="flexContainer" style="margin-top: 3vh;">
+                <div class="flexText">
+                    <h5 class="purple">Overview</h5>
+                    <p>
+                        ...         
+                    </p>
+                    <h5 class="purple">Team</h5>
+                    <p>7 Engineers, 2 Designers, 1 Product Lead</p>
+                    <h5 class="purple">Role</h5>
+                    <p>Designer</p>
+                    <h5 class="purple">Timeline</h5>
+                    <p>Spring 2018 - Fall 2019</p>
+                </div>
+
+                <!--
+<div class="flexImage-bigger">
+<img class="shadow image" src="images/uplift/uplift-overview2.png" alt="overview image"/>
+</div>
+-->
+            </div>
+            <div class="hr"></div>
+
+        </div>
+
+        <!-------------------More of my Projects------------------->
+        <div class="content-grid" style="margin-bottom: -4vh; width: 85%;">
+            <h5 class="purple" style="text-align: center;">Check out More of my Projects</h5>
+            <h6 class="more-projects">
+                <a class="more-projects-purple" href="eater.html">Eater App</a> /
+                <a class="more-projects-purple" href="https://blog.usejournal.com/instagram-concept-hashtag-filters-253708c35bd6" target="_blank">Instagram Hashtag Filters</a> /
+                <a class="more-projects-purple" href="uplift.html">Uplift</a> /
+                <a class="more-projects-purple" href="https://www.cureviews.org/" target="_blank">CU Reviews</a> /
+                <a class="more-projects-purple" href="dailyui.html">Daily UI</a>
+            </h6>
+        </div>
+
+        <!-------------------Footer------------------->
+        <div class="footer">
+            <h4 class="purple line purpleline"><a id="mailto" href="mailto:jnp49@cornell.edu"> 👋 Let's Get In Touch!</a></h4>
+            <div class="social">                
+                <a href="https://www.linkedin.com/in/jessicaprague/" target="_blank"> <img class="icon" src="images/linkedin.png" alt="linkedin"/> </a>
+                <a href="https://medium.com/@jessicaprague/" target="_blank"> <img class="icon" src="images/medium.png" alt="medium"/> </a>
+                <a href="https://twitter.com/jessicaprague" target="_blank"> <img class="icon" src="images/twitter.png" alt="twitter"/> </a>
+                <a href="https://www.instagram.com/jesseprague/" target="_blank"> <img class="icon" src="images/instagramlogo.png" alt="instagram"/> </a>
+            </div>
+            <h6 class="name"><span id="purpleStar">★</span> DESIGNED AND CODED BY JESSICA PRAGUE <span id="purpleStar">★</span></h6>
+        </div>
+        <!-------------------Scroll To Top------------------->
+        <a href="#top" aria-label="scroll to top" class="scroll-to-top"></a>
+    </body>
+</html>

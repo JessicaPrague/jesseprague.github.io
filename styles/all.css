@@ -17,7 +17,7 @@ COLORS
     --blue: #669CFF;
     --text: #333333;
     --pink: #FD7373;
-    --yellow: #D8CF5F;
+    --yellow: #CAC25C;
     --purple: rgb(148, 110, 221);
     --cornellred: #f05354;
     --facebookblue: #4267b2;
@@ -227,8 +227,9 @@ GRID
         width: 60%;
         padding-top: 2em;
         padding-bottom: 2em;
-
-
+    }
+    .first-below-line {
+        padding-top: 0 !important;
     }
 }
 .c12 {
@@ -824,6 +825,14 @@ GET IN TOUCH
 .greenline a::after {
     background: var(--green) !important;
 }
+/*Purple Line*/
+.purpleline a{
+    color: var(--purple) !important;
+    text-transform: uppercase;
+}
+.purpleline a::after {
+    background: var(--purple) !important;
+}
 
 
 
@@ -883,6 +892,9 @@ FOOTER
 }
 #greenStar {
     color: var(--green);
+}
+#purpleStar {
+    color: var(--purple);
 }
 
 /* ===============
@@ -968,9 +980,10 @@ ABOUT PAGE
     flex-grow: 1;
 }
 .about-me-image {
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     margin-top: 3vh;
+    margin-bottom: 2vh;
 }
 .about-me-image img{
     width: 100%;
@@ -1067,7 +1080,7 @@ EATER PAGE
         width: 40vh;
     }
     .flexImage-bigger img {
-        width: 40vw;
+        width: 35vw;
     }
     .flexImage,
     .flexImage-bigger{
@@ -1357,6 +1370,7 @@ MORE OF MY PROJECTS
     line-height: 1.7em;
 }
 .more-projects-pink,
+.more-projects-purple,
 .more-projects-yellow,
 .more-projects-green {
     font-weight: bold;
@@ -1371,13 +1385,15 @@ MORE OF MY PROJECTS
 @media screen and (min-width: 768px) {
     .more-projects-pink:hover {
         background-color: rgba(253, 115, 115, 0.4); /* opacity .4 of pink*/
-
     }
     .more-projects-yellow:hover {
-        background-color: rgba(216, 207, 95, 0.4); /* opacity .4 of yellow*/
+        background-color: rgba(202, 194, 92, 0.4); /* opacity .4 of yellow*/
     }
     .more-projects-green:hover {
-        background-color: rgba(118, 173, 68, 0.4); /* opacity .4 of yellow*/
+        background-color: rgba(118, 173, 68, 0.4); /* opacity .4 of green*/
+    }
+    .more-projects-purple:hover {
+        background-color: rgba(148, 110, 221, 0.2); /* opacity .2 of purple*/
     }
 }
 
