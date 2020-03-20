@@ -1402,13 +1402,31 @@ MORE OF MY PROJECTS
 /* ===============
 UPLIFT PAGE 
 =============== */
+.f-cont {
+/*    display: flex;*/
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+/*Desktop*/
+@media screen and (min-width: 768px) {
+    .f-cont {
+        display: flex;
+    }
+}
+.f-text {
+    flex: 50%;
+}
+.f-image {
+    flex: 50%;
+}
 
 /* ===============
 DAILY UI 
 =============== */
 .daily-image {
     flex: 40%;
-
 }
 .hover:hover {
     transition: .3s ease-in-out;
