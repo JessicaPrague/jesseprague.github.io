@@ -21,6 +21,7 @@ COLORS
     --purple: rgb(148, 110, 221);
     --cornellred: #f05354;
     --facebookblue: #4267b2;
+    --newfacebookblue: #1877f2;
     --green: #76ad44;
     --orange: #ED9B30;
 }
@@ -54,6 +55,14 @@ COLORS
 }
 .facebookblue:before,
 .facebookblue:after {
+    background-color: var(--facebookblue);
+}
+/*NEW FACEBOOK BLUE*/
+.newfacebookblue {
+    color: var(--newfacebookblue) !important;
+}
+.newfacebookblue:before,
+.newfacebookblue:after {
     background-color: var(--facebookblue);
 }
 /*ORANGE*/
@@ -658,6 +667,11 @@ PROJECTS GRID
 .eater-overlay {
     background-color: rgba(198, 103, 109, 0.65); /*Eater background img color w/ .65 opacity*/
 }
+
+.facebook-watch-overlay {
+    background-color: rgba(24, 119, 242, 0.65); /*Facebook Watch background img color w/ .65 opacity*/  
+}
+
 .explornell-overlay {
     background-color: rgba(148, 110, 221, 0.65); /*Explornell background img color w/ .65 opacity*/
 }
@@ -846,6 +860,7 @@ FOOTER
     margin-top: 5vh;
     padding-top: 2vh;
     padding-bottom: 5vh;
+
     width: 100% auto;
 }
 .social {
@@ -897,6 +912,13 @@ FOOTER
 }
 #purpleStar {
     color: var(--purple);
+}
+
+.love {
+    background: linear-gradient(270deg, #FD7373, #669CFF);
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ===============
@@ -1403,7 +1425,7 @@ MORE OF MY PROJECTS
 UPLIFT PAGE 
 =============== */
 .f-cont {
-/*    display: flex;*/
+    /*    display: flex;*/
     justify-content: center;
     align-items: center;
     width: 80%;
