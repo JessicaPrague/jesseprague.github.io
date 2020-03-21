@@ -20,8 +20,7 @@ COLORS
     --yellow: #CAC25C;
     --purple: rgb(148, 110, 221);
     --cornellred: #f05354;
-    --facebookblue: #4267b2;
-    --newfacebookblue: #1778f2;
+    --facebookblue: #1778f2;
     --green: #76ad44;
     --orange: #ED9B30;
 }
@@ -55,14 +54,6 @@ COLORS
 }
 .facebookblue:before,
 .facebookblue:after {
-    background-color: var(--facebookblue);
-}
-/*NEW FACEBOOK BLUE*/
-.newfacebookblue {
-    color: var(--newfacebookblue) !important;
-}
-.newfacebookblue:before,
-.newfacebookblue:after {
     background-color: var(--facebookblue);
 }
 /*ORANGE*/
@@ -611,7 +602,7 @@ PARALLAX
     background: #ec343457;
 }
 .facebooklineswipe {
-    color: var(--facebookblue);
+    color: var(--facebookblue)
 }
 .facebooklineswipe::before {
     background: #4267b24f;
@@ -849,13 +840,13 @@ GET IN TOUCH
 .purpleline a::after {
     background: var(--purple) !important;
 }
-/*New FB Blue Line*/
-.newfacebookblueline a{
-    color: var(--newfacebookblue) !important;
+/*Facebook Blue Line*/
+.facebookblueline a{
+    color: var(--facebookblue) !important;
     text-transform: uppercase;
 }
-.newfacebookblueline a::after {
-    background: var(--newfacebookblue) !important;
+.facebookblueline a::after {
+    background: var(--facebookblue) !important;
 }
 
 
@@ -914,8 +905,8 @@ FOOTER
 #yellowStar {
     color: var(--yellow);
 }
-#newBlueStar {
-    color: var(--newfacebookblue);
+#facebookBlueStar {
+    color: var(--facebookblue);
 }
 #greenStar {
     color: var(--green);
@@ -1406,7 +1397,7 @@ MORE OF MY PROJECTS
 .more-projects-pink,
 .more-projects-purple,
 .more-projects-yellow,
-.more-projects-newfacebookblue,
+.more-projects-facebookblue,
 .more-projects-green {
     font-weight: bold;
     color: black;
@@ -1430,7 +1421,7 @@ MORE OF MY PROJECTS
     .more-projects-purple:hover {
         background-color: rgba(148, 110, 221, 0.2); /* opacity .2 of purple*/
     }
-    .more-projects-newfacebookblue:hover {
+    .more-projects-facebookblue:hover {
         background-color: rgba(23, 120, 242, 0.2); /* opacity .2 of fb blue*/
     }
 }
