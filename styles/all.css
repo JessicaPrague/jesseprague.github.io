@@ -245,17 +245,32 @@ GRID
     grid-column: 8 / 12;
 }
 
+.always-flex {
+    display: flex;
+}
+
+/*Desktop*/
+@media screen and (min-width: 768px) {
+    .flex {
+        display: flex;
+    }
+}
+
+
 /* ===============
 DESIGNS 
 =============== */
 .shadow {
-    box-shadow: 0 0 12px 0 var(--gray-01);
+    box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.2);
 }
 .image {
     width: 80%; 
     margin: 0 auto;
     margin-left: 10%;
     margin-top: 2vh;
+}
+.round {
+    border-radius: 4px;
 }
 .centered {
     text-align: center;
