@@ -599,13 +599,14 @@ PARALLAX
     color: var(--cornellred);
 }
 .cornelllineswipe::before {
-    background: #ec343457;
+    background: rgba(240, 83, 84, .25); /*Cornell Red color w/ .25 opacity*/  
+
 }
 .facebooklineswipe {
     color: var(--facebookblue)
 }
 .facebooklineswipe::before {
-    background: #4267b24f;
+    background: rgba(23, 120, 242, .25); /*Facebook Blue color w/ .25 opacity*/  
 }
 
 @media screen and (max-width: 992px) {
