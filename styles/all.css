@@ -405,6 +405,12 @@ PROGRESS BAR
     top: 0px;
     z-index: 100;
 }
+/*mobile*/
+@media screen and (max-width: 768px) {
+    #_progress {
+        height: 3px;
+    }
+}
 .progress-pink {
     background: linear-gradient(to right, var(--pink) var(--scroll),transparent 0);
 }
