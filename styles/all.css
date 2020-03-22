@@ -111,6 +111,11 @@ FONTS
     src: url(../fonts/SF-Pro-Display-Regular.woff);
     font-weight: normal;
 }
+@font-face {
+    font-family: 'LuckiestGuy';
+    src: url(../fonts/LuckiestGuy-Regular.ttf);
+    font-weight: normal;
+}
 
 /*Font Changes*/
 h1, h2, h3, h4, h5, h6, p {
@@ -256,7 +261,6 @@ GRID
     }
 }
 
-
 /* ===============
 DESIGNS 
 =============== */
@@ -362,7 +366,7 @@ DESIGNS
 /* ===============
 SCROLL TO TOP 
 =============== */
-.scroll-to-top {
+.scroll-to-top  {
     position: fixed;
     bottom: 11%;
     right: 4em;
@@ -1489,3 +1493,100 @@ DAILY UI
     }
 }
 
+/* ==========================
+COMING SOON ANIMATION
+============================== */
+
+/*CODE IS FROM https://codepen.io/kylewetton/pen/yLBwdJX*/
+
+.coming-soon {
+    background: var(--lightbg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'LuckiestGuy', cursive;
+
+}
+.outer {
+    padding-top: 20vh;   
+    padding-bottom: 10vh;
+}
+
+.coming-soon h1 {
+    margin: 0;
+    font-size: 8em;
+    padding: 0;
+    text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black,
+        0.05em 0.005em 0 black, 0em 0.08em 0 black,
+        0.05em 0.08em 0 black, 0px -0.03em 0 black,
+        -0.03em -0.03em 0 black, -0.03em 0.08em 0 black;
+}
+
+.coming-soon-blue h1 {
+    color: #4593F5; /* Few shades lighter than Facebook Blue*/
+}
+.coming-soon-yellow h1 {
+    color: #eee263; /* Few shades lighter than Yellow*/
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .coming-soon h1 {
+        font-size: 3.5em;
+    }
+    .outer {
+        padding-top: 8vh;
+        padding-bottom: 4vh;
+    }
+}
+
+.coming-soon span {
+    transform: scale(0.9);
+    display: inline-block;
+}
+.coming-soon span:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+        alternate;
+}
+.coming-soon span:last-child {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+        infinite alternate;
+}
+
+@keyframes bop {
+    0% {
+        transform: scale(0.9);
+    }
+    50%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bopB {
+    0% {
+        transform: scale(0.9);
+    }
+    80%,
+    100% {
+        transform: scale(1) rotateZ(-3deg);
+    }
+}
+.back-home {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.left {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    outline: none !important;
+    margin-top: 1vh;
+    text-align: center;
+    transition: 0.28s;
+}
+.left:hover {
+    opacity: .5;
+}
