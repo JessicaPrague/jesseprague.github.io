@@ -1533,11 +1533,16 @@ COMING SOON ANIMATION
 @media screen and (max-width: 768px) {
     .coming-soon h1 {
         font-size: 3.5em;
+        text-shadow: 0 0.1em 5px black, 0.05em -0.03em 0 black,
+            0.05em 0.005em 0 black, 0em 0.08em 0 black,
+            0.05em 0.08em 0 black, 0px -0.03em 0 black,
+            -0.03em -0.03em 0 black, -0.03em 0.08em 0 black;
     }
-    .outer {
-        padding-top: 8vh;
-        padding-bottom: 4vh;
-    }
+}
+.outer {
+    padding-top: 8vh;
+    padding-bottom: 4vh;
+}
 }
 
 .coming-soon span {
