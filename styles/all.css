@@ -395,6 +395,30 @@ SCROLL TO TOP
 }
 
 /* ===============
+PROGRESS BAR 
+=============== */
+#_progress {
+    --scroll: 0%;
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    top: 0px;
+    z-index: 100;
+}
+.progress-pink {
+    background: linear-gradient(to right, var(--pink) var(--scroll),transparent 0);
+}
+.progress-green {
+    background: linear-gradient(to right, var(--green) var(--scroll),transparent 0);
+}
+.progress-yellow {
+    background: linear-gradient(to right, var(--yellow) var(--scroll),transparent 0);
+}
+.progress-blue {
+    background: linear-gradient(to right, var(--facebookblue) var(--scroll),transparent 0);
+}
+
+/* ===============
 NAVIGATION 
 =============== */
 header {
@@ -1509,7 +1533,7 @@ COMING SOON ANIMATION
 }
 .outer {
     padding-top: 20vh;   
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 }
 
 .coming-soon h1 {
@@ -1538,11 +1562,10 @@ COMING SOON ANIMATION
             0.05em 0.08em 0 rgba(0,0,0,.6), 0px -0.03em 0 rgba(0,0,0,.3),
             -0.03em -0.03em 0 rgba(0,0,0,.6), -0.03em 0.08em 0 rgba(0,0,0,.6);
     }
-}
-.outer {
-    padding-top: 8vh;
-    padding-bottom: 4vh;
-}
+    .outer {
+        padding-top: 8vh;
+        padding-bottom: 2vh;
+    }
 }
 
 .coming-soon span {
@@ -1592,6 +1615,15 @@ COMING SOON ANIMATION
     text-align: center;
     transition: 0.28s;
 }
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .left {
+        width: 1.2em;
+        height: 1.2em;
+    }
+}
+
 .left:hover {
     opacity: .5;
 }
