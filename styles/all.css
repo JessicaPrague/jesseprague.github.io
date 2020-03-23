@@ -221,9 +221,26 @@ GRID
     padding-top: .5em;
     padding-bottom: .5em;
 }
+.flex-grid {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.flex-image {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex-image img{
+    width: 80%; 
+    margin: 0 auto; 
+}
+
 /*Desktop*/
 @media screen and (min-width: 768px) {
-    .thegrid {
+    .thegrid, .flex-grid {
         width: 80%;
         margin-top: 2em;
         margin-bottom: 2em;
@@ -235,6 +252,20 @@ GRID
     }
     .first-below-line {
         padding-top: 0 !important;
+    }
+    .flex-grid {
+        justify-content:center;
+    }
+    .flex-grid {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .flex-image {
+        margin-right: 10vw;
+        width: 20% !important;
+    }
+    .flex-image img {
+        width: 100%;
     }
 }
 .c12 {
@@ -273,6 +304,7 @@ DESIGNS
     margin-left: 10%;
     margin-top: 2vh;
 }
+
 .round {
     border-radius: 4px;
 }
@@ -1535,16 +1567,15 @@ COMING SOON ANIMATION
     justify-content: center;
     align-items: center;
     font-family: 'LuckiestGuy', cursive;
-
-}
-.outer {
-    padding-top: 20vh;   
-    padding-bottom: 5vh;
+    padding-top: 15vh;   
+    padding-bottom: 3vh;
 }
 
 .coming-soon h1 {
     margin: 0;
-    font-size: 8em;
+    font-size: 7em;
+    text-align: center;
+    margin-bottom: 4vh;
     padding: 0;
     text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black,
         0.05em 0.005em 0 black, 0em 0.08em 0 black,
@@ -1561,6 +1592,10 @@ COMING SOON ANIMATION
 
 /*Mobile*/
 @media screen and (max-width: 768px) {
+    .coming-soon {
+        padding-top: 8vh;
+        padding-bottom: 2vh;
+    }
     .coming-soon h1 {
         font-size: 3.5em;
         text-shadow: 0 0.1em 20px rgba(0,0,0,.6), 0.05em -0.03em 0 rgba(0,0,0,.6),
@@ -1568,10 +1603,7 @@ COMING SOON ANIMATION
             0.05em 0.08em 0 rgba(0,0,0,.6), 0px -0.03em 0 rgba(0,0,0,.3),
             -0.03em -0.03em 0 rgba(0,0,0,.6), -0.03em 0.08em 0 rgba(0,0,0,.6);
     }
-    .outer {
-        padding-top: 8vh;
-        padding-bottom: 2vh;
-    }
+
 }
 
 .coming-soon span {
@@ -1606,11 +1638,6 @@ COMING SOON ANIMATION
         transform: scale(1) rotateZ(-3deg);
     }
 }
-.back-home {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 2vh;
-}
 
 .left {
     width: 2em;
@@ -1633,3 +1660,4 @@ COMING SOON ANIMATION
 .left:hover {
     opacity: .5;
 }
+
