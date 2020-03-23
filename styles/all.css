@@ -17,7 +17,7 @@ COLORS
     --blue: #669CFF;
     --text: #333333;
     --pink: #FD7373;
-    --yellow: #CAC25C;
+    --yellow: #B9B13C;
     --purple: rgb(148, 110, 221);
     --cornellred: #f05354;
     --facebookblue: #1778f2;
@@ -228,7 +228,7 @@ GRID
     padding-bottom: .5em;
 }
 .flex-image {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     text-align: center;
 }
@@ -265,7 +265,7 @@ GRID
         width: 20% !important;
     }
     .flex-image img {
-        width: 100%;
+        width: 80%;
     }
 }
 .c12 {
@@ -465,14 +465,15 @@ header {
     text-decoration: none;
     background-color: black;
 }
-ul {
+header ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-a {
+header a, a {
     text-decoration: none;
 }
+
 .jp a,
 .main-nav a {
     padding: 10px 15px;
@@ -1071,6 +1072,15 @@ ABOUT PAGE
     width: 101%;
     left: 0;
 }
+.upliftline a{
+    color: var(--yellow);
+}
+.upliftline a::after {
+    background: var(--yellow);
+    width: 101%;
+    left: 0;
+}
+
 /*Mobile*/
 @media screen and (max-width: 768px) {
     .places {
@@ -1495,7 +1505,7 @@ MORE OF MY PROJECTS
         background-color: rgba(253, 115, 115, 0.4); /* opacity .4 of pink*/
     }
     .more-projects-yellow:hover {
-        background-color: rgba(202, 194, 92, 0.4); /* opacity .4 of yellow*/
+        background-color: rgba(185, 177, 60, 0.4); /* opacity .4 of yellow*/
     }
     .more-projects-green:hover {
         background-color: rgba(118, 173, 68, 0.4); /* opacity .4 of green*/
@@ -1554,6 +1564,15 @@ DAILY UI
         flex: 100%;
     }
 }
+
+/*Desktop*/
+@media screen and (min-width: 768px) {
+    .uplift-text-reverse  {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
 
 /* ==========================
 COMING SOON ANIMATION
