@@ -22,6 +22,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-------------------Linking CSS------------------->
         <link rel="stylesheet" href="styles/all.css" type="text/css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
         <!-------------------Icons------------------->
         <link rel="icon" type="image/x-icon" href="jp-favicon.ico"/>
@@ -73,7 +75,7 @@
         <div class="projectParallax" data-parallax="scroll" data-z-index="1" data-image-src="images/facebookWatch-dark.png">
             <div class="paratext">  
                 <h1 class="para1 projectTitle">Facebook Watch</h1>
-                <h6 class="para2 projectTitle2"> .......</h6>
+                <h6 class="para2 projectTitle2">Summer 2019</h6>
             </div>
         </div>
         <div class="top-of-page"></div>
@@ -97,7 +99,7 @@
         </div>
 
         <!-------------------Internship Details------------------->
-        <div class="content-grid">
+        <div data-aos="zoom-in" class="content-grid">
             <p>I spent my 2019 summer at Facebook's Menlo Park Campus. Interning as a Product Designer on the Facebook Watch Video Design Team, I had the amazing opportunity to work on projects ranging from <span class="bold">video auto-chaining</span> to re-designing the <span class="bold">video context sheet</span>. I even worked on a Hackathon project that explored <span class="bold">scheduling posts on Instagram.</span> The best part about my summer was working alongside such inspiring and talented people. 💙  </p>
         </div>
 
@@ -134,7 +136,7 @@
 -->
 
 
-        <div class="content-grid" >
+        <div data-aos="fade-up" class="content-grid" >
             <h4 class="withoutH5">Some Things I Learned</h4>
             <ol>
                 <li>
@@ -147,7 +149,7 @@
                     Challenge yourself and <span class="bold">be comfortable with being uncomfortable</span>.
                 </li>
                 <li>
-                Work can <span class="italic">actually</span> be fun. 😀
+                    Work can <span class="italic">actually</span> be fun. 😀
                 </li>
             </ol>
         </div>
@@ -184,5 +186,11 @@
         </div>
         <!-------------------Scroll To Top------------------->
         <a href="#top" aria-label="scroll to top" class="scroll-to-top"></a>
+        
+        <!-------------------AOS ANIMATIONS------------------->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

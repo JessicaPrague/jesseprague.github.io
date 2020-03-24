@@ -5,7 +5,6 @@
 
     <!-------------------Head------------------->
     <head id="top">
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161539766-1"></script>
         <script>
@@ -21,7 +20,8 @@
         <meta name="Description" content="Jessica Prague">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-------------------Linking CSS------------------->
-        <link rel="stylesheet" href="styles/all.css" type="text/css">
+        <link rel="stylesheet" href="styles/all.css" type="text/css"/>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <!-------------------Icons------------------->
         <link rel="icon" type="image/x-icon" href="jp-favicon.ico"/>
@@ -30,7 +30,7 @@
         <!-------------------Javascript------------------->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/parallax.min.js"></script>
-        <script src="js/fader.js"></script>
+        <script src="js/progress-bar.js"></script>
         <script>
             /* Scroll button appears on scroll */
             $(window).scroll(function(){
@@ -56,9 +56,11 @@
             });
         </script>
 
+
     </head>
 
     <body>
+        <div id="_progress" class="progress-yellow"></div>
         <!-------------------Navigation------------------->
         <header class="header">
             <h5 class="jp"><a href="index.html">Jessica Prague</a></h5>
@@ -78,11 +80,136 @@
         </div>
         <div class="top-of-page"></div>
 
+        <div class="thegrid">
+            <!-------------------Overview------------------->
+            <div class="flexContainer" style="margin-top: 3vh;">
+                <div class="flexText">
+                    <h5 class="yellow">Vision</h5>
+                    <p>
+                        Our vision is to provide the best college fitness and wellness resource for the Cornell community.
+                    </p>
+                    <h5 class="yellow">Team</h5>
+                    <p>7 Engineers, 2 Designers, 1 Product Lead</p>
+                    <h5 class="yellow">Role</h5>
+                    <p>Designer</p>
+                    <h5 class="yellow">Timeline</h5>
+                    <p>Spring 2018 - Fall 2019</p>
+                </div>
+                <div class="flexImage-bigger">
+                    <img class="shadow image" src="images/uplift/uplift-overview.png" alt="overview image"/>
+                </div>
+            </div>
+            <div class="hr" style="margin-bottom: 0;"></div>
+        </div>
+
+        <div class="content-grid first-below-line">
+            <h3 style="text-align: center; margin-top: 2vh;"> Availiable on the <a>App Store</a>!</h3>
+            <h4 class="line upliftline"><a href="https://apps.apple.com/us/app/uplift-cornell-fitness/id1439374374" target="_blank">Download Here</a></h4> 
+        </div>
+
+        <img style="margin: 0 auto; width: 90%; text-align: center; margin-left: 5%;" src="images/uplift/appstore.png" alt="app store images"/>
+
+        <div class="content-grid">
+            <div class="hr" style="margin-bottom: 0;"></div>
+        </div>
+
+        <!-------------------The Problem------------------->
+        <div class="content-grid first-below-line">
+            <h5 class="yellow">What's Currently wrong</h5>
+            <h4>The Problem</h4>
+            <p>People want to be able to quickly access information about the best fitness options available at Cornell, but they <span class="bold">can’t do that well</span> because:</p>
+            <ol>
+                <li>The current <a class="yellow link" href="https://recreation.athletics.cornell.edu/fitness" target="_blank">Cornell fitness website</a> is confusing and hard to navigate.</li>
+                <li>Cornell lacks a central hub with all available fitness resources.</li>
+                <li>It's difficult to visualize future schedules.</li>
+            </ol>
+        </div>
+
+
+
+        <!-------------------Key Features------------------->
+        <div class="content-grid" style="padding-bottom: 0 !important;">
+            <h4>Key Features</h4>
+        </div>
+        <!--ONBOARDING (dark)-->
+        <div class="darkbg"> 
+
+            <div class="flex flex-grid" style="align-items: center;">
+                <div class="flex-image" style="flex: 40%;">
+                    <img data-aos="fade-right" src="images/uplift/onboarding.gif" alt="onboarding image"/>
+                </div>
+                <div data-aos="fade-left" class="uplift-text" style="flex: 60%;" >
+                    <h5 class="yellow">The Onboarding Process</h5>
+                    <p>
+                        When users open the app for the first time, they're able to select their favorite gyms and gym classes at Cornell.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--HOME PAGE (light)-->
+        <div class="flex flex-grid" style="align-items: center; flex-direction: row-reverse;">
+            <div class="flex-image" style="flex: 40%; ">
+                <img data-aos="fade-left" style="width: 100%;" src="images/uplift/home.png" alt="home image"/>
+            </div>
+            <div data-aos="fade-right" class="uplift-text-reverse" style="flex: 60%;" >
+                <h5 class="yellow">Discovery</h5>
+                <p>
+                    On the Home Page, users can browse open gyms and classes that are happening today, in real-time.
+                </p>
+            </div>
+        </div>
+
+
+        <!--CLASSES (dark)-->
+        <div class="darkbg">
+            <div class="flex flex-grid" style="align-items: center;">
+                <div class="flex-image" style="flex: 40%;">
+                    <img data-aos="fade-right" src="images/uplift/classes.gif" alt="classes & filters image"/>
+                </div>
+                <div data-aos="fade-left" class="uplift-text" style="flex: 60%;" >
+                    <h5 class="yellow">Search and Filter Classes</h5>
+                    <p>
+                        Do you have free time in your schedule from 2pm - 4pm? This is the best way to find a class that matches your ideal criteria. To apply a class filter, choose the fitness center, start/end time, class type, and your favorite instructors! 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--GYMS(light)-->
+        <div class="flex flex-grid" style="align-items: center; flex-direction: row-reverse;">
+            <div class="flex-image" style="flex: 40%; ">
+                <img data-aos="fade-left" style="width: 100%;" src="images/uplift/gyms.gif" alt="gym details image"/>
+            </div>
+            <div data-aos="fade-right" class="uplift-text-reverse" style="flex: 60%;" >
+                <h5 class="yellow">Gym Details</h5>
+                <p>
+                    Want to know more about Cornell's gyms? Check out details about each gym: gym hours, which times are busiest or most popular, available equipment, and what facilities are offered (bowling alley, basketball courts, etc.)
+                </p>
+            </div>
+        </div>
+
+        <!--FAVORITES (dark)-->
+        <div class="darkbg">
+            <div class="flex flex-grid" style="align-items: center;">
+                <div class="flex-image" style="flex: 40%;">
+                    <img data-aos="fade-right" src="images/uplift/favorites.gif" alt="favorites image"/>
+                </div>
+                <div data-aos="fade-left" class="uplift-text" style="flex: 60%;" >
+                    <h5 class="yellow">Favorites</h5>
+                    <p>
+                        Keep track of your favorite classes so you don’t miss out on what’s up next. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
 
         <!-------------------COMING SOON------------------->
-            <div class="coming-soon coming-soon-yellow">
-                <h1><span>CASE STUDY </span> <span>COMING SOON</span></h1>
-            </div>
+        <div data-aos="flip-left" class="coming-soon coming-soon-yellow">
+            <h1><span>CASE STUDY </span> <span>COMING SOON</span></h1>
+        </div>
+
 
         <!-------------------More of My Projects------------------->
         <div class="content-grid" style="margin-bottom: -4vh; width: 85%;">
@@ -109,5 +236,12 @@
         </div>
         <!-------------------Scroll To Top------------------->
         <a href="#top" aria-label="scroll to top" class="scroll-to-top"></a>
+
+        <!-------------------AOS ANIMATIONS------------------->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        
     </body>
 </html>

@@ -1,0 +1,113 @@
+<!-------------------Uplift------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-------------------Head------------------->
+    <head id="top">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161539766-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-161539766-1');
+        </script>
+
+        <meta charset="UTF-8">
+        <title>Uplift • Jessica Prague</title>
+        <meta name="Description" content="Jessica Prague">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-------------------Linking CSS------------------->
+        <link rel="stylesheet" href="styles/all.css" type="text/css">
+
+        <!-------------------Icons------------------->
+        <link rel="icon" type="image/x-icon" href="jp-favicon.ico"/>
+
+
+        <!-------------------Javascript------------------->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/fader.js"></script>
+        <script>
+            /* Scroll button appears on scroll */
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 20) {
+                    $('.scroll-to-top').removeClass('no-display');
+                } else {
+                    $('.scroll-to-top').addClass('no-display');
+                }
+            });
+            /* Smooth Scrolling */
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 500, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <!-------------------Navigation------------------->
+        <header class="header">
+            <h5 class="jp"><a href="index.html">Jessica Prague</a></h5>
+            <ul class="main-nav">
+                <li><a href="index.html" class="active">Work</a></li>
+                <li><a href="about.html">My Story</a></li>
+                <li><a href="Jessica_Prague_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </header> 
+
+        <!-------------------Parallax Effect------------------->
+        <div class="projectParallax" data-parallax="scroll" data-z-index="1" data-image-src="images/uplift-dark.png">
+            <div class="paratext">  
+                <h1 class="para1 projectTitle">Uplift</h1>
+                <h6 class="para2 projectTitle2"> Revolutionizing the way students discover resources to exercise within the Cornell community</h6>
+            </div>
+        </div>
+        <div class="top-of-page"></div>
+
+
+        <!-------------------COMING SOON------------------->
+            <div class="coming-soon coming-soon-yellow">
+                <h1><span>CASE STUDY </span> <span>COMING SOON</span></h1>
+            </div>
+
+        <!-------------------More of My Projects------------------->
+        <div class="content-grid" style="margin-bottom: -4vh; width: 85%;">
+            <h5 class="yellow" style="text-align: center;">Check out More of my Projects</h5>
+            <h6 class="more-projects">
+                <a class="more-projects-yellow" href="facebook-watch.html">Facebook Watch</a> /
+                <a class="more-projects-yellow" href="eater.html">Eater App</a> /
+                <a class="more-projects-yellow" href="https://blog.usejournal.com/instagram-concept-hashtag-filters-253708c35bd6" target="_blank">Instagram Hashtag Filters</a> /
+                <a class="more-projects-yellow" href="https://www.cureviews.org/" target="_blank">CU Reviews</a> /
+                <a class="more-projects-yellow" href="dailyui.html">Daily UI</a>
+            </h6>
+        </div>
+
+        <!-------------------Footer------------------->
+        <div class="footer">
+            <h4 class="yellow line yellowline"><a id="mailto" href="mailto:jnp49@cornell.edu"> 👋 Let's Get In Touch!</a></h4>
+            <div class="social">                
+                <a href="https://www.linkedin.com/in/jessicaprague/" target="_blank"> <img class="icon" src="images/linkedin.png" alt="linkedin"/> </a>
+                <a href="https://medium.com/@jessicaprague/" target="_blank"> <img class="icon" src="images/medium.png" alt="medium"/> </a>
+                <a href="https://twitter.com/jessicaprague" target="_blank"> <img class="icon" src="images/twitter.png" alt="twitter"/> </a>
+                <a href="https://www.instagram.com/jesseprague/" target="_blank"> <img class="icon" src="images/instagramlogo.png" alt="instagram"/> </a>
+            </div>
+            <h6 class="name"><span id="yellowStar">★</span> DESIGNED AND CODED WITH <span class="love">LOVE</span> BY JESSICA PRAGUE <span id="yellowStar">★</span></h6>
+        </div>
+        <!-------------------Scroll To Top------------------->
+        <a href="#top" aria-label="scroll to top" class="scroll-to-top"></a>
+    </body>
+</html>

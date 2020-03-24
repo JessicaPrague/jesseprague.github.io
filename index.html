@@ -5,7 +5,7 @@
 
     <!-------------------Head------------------->
     <head id="top">
-        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161539766-1"></script>
         <script>
@@ -15,13 +15,14 @@
 
             gtag('config', 'UA-161539766-1');
         </script>
-        
+
         <meta charset="UTF-8">
         <title>Jessica Prague</title>
         <meta name="Description" content="Jessica Prague">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-------------------Linking CSS------------------->
         <link rel="stylesheet" href="styles/all.css" type="text/css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <!-------------------Icons------------------->
         <link rel="icon" type="image/x-icon" href="jp-favicon.ico"/>
@@ -69,11 +70,10 @@
 
         <!-------------------Parallax Effect------------------->
         <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/frontPage.png">
-            <div class="paratext">  
-                <h1 class="para1">Hi, I'm Jesse.</h1>
-                <h3 class="para2">Student at <a class = "lineswipe cornelllineswipe" href = "https://www.infosci.cornell.edu" target="_blank">Cornell</a>, Incoming Product Designer at <a class = "lineswipe facebooklineswipe" href = "https://facebook.design" target="_blank">Facebook</a></h3>
+            <div  class="paratext">  
+                <h1 data-aos="fade-down" class="para1">Hi, I'm Jesse!</h1>
+                <h3 data-aos="fade-down" class="para2">Student at <a class = "lineswipe cornelllineswipe" href = "https://www.infosci.cornell.edu" target="_blank">Cornell</a>, Incoming Product Designer at <a class = "lineswipe facebooklineswipe" href = "https://facebook.design" target="_blank">Facebook</a></h3>
             </div>
-
             <div id = "work"></div>
         </div>
 
@@ -148,5 +148,11 @@
         </div>
         <!-------------------Scroll To Top------------------->
         <a href="#top" aria-label="scroll to top" class="scroll-to-top"></a>
+        
+        <!-------------------AOS ANIMATIONS------------------->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
